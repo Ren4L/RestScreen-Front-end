@@ -1,0 +1,56 @@
+@import "../../index.scss";
+
+.container {
+  position: relative;
+  margin: 0;
+  width: 50px;
+  font-family: "Manrope", serif;
+  z-index: 6;
+}
+
+.activeLang{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg{
+    margin-left: 3px;
+  }
+}
+
+.header {
+  border: transparent;
+  display: flex;
+  color: white;
+  z-index: 1;
+}
+.current {
+  font-size: 18px;
+  line-height: 24px;
+  z-index: 0;
+}
+
+.body {
+  border: transparent;
+  border-top: 0;
+  display: none;
+  left: 0%;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  color: white;
+  width: 60%;
+  text-align: left;
+  &__active{
+    display: block;
+  }
+}
+.item {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 4px 2px;
+}
+
+.item:hover {
+  background-color: #3c3c3c;
+}

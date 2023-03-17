@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "paths": {
+      "@components":["./components/index.tsx"],
+      "@hooks":["./hooks/index.tsx"],
+      "@pages":["./pages/index.tsx"],
+      "@utils":["./utils/index.tsx"]
+    },
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es2020",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+.inputContainer{
+  position: relative;
+  display: flex;
+  width: 60%;
+
+  .Input{
+    padding: 10px 39px 10px 16px;
+    background: $inputColor;
+    border: 1px solid #121116;
+    border-radius: 5px;
+    color: white;
+    font-family: "Manrope", serif;
+    font-size: 14px;
+    width: 100%;
+    transition: border .5s ease-in-out;
+  }
+
+  svg{
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+  }
+
+  .Error{
+    border: 1px solid $error;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+}

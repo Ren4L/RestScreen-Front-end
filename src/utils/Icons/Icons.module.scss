@@ -1,0 +1,18 @@
+@import "../../index.scss";
+
+.LogoContainer{
+  display: flex;
+  align-items: center;
+  width: 170px;
+  cursor: pointer;
+  
+  @media (max-width: 850px) {
+    width: 48px;
+  }
+}
+
+.LogoContent{
+  font-size: 20px;
+  font-family: "Manrope", serif;
+  color: white;
+}

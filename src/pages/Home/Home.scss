@@ -1,0 +1,75 @@
+@import "../../index.scss";
+
+.Home--Container{
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+  @media (max-width: 850px) {
+    font-size: 40px;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+  @media (max-width: 500px) {
+    font-size: 35px;
+  }
+  .Not--Auth--Banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5% 0;
+    font-size: 1.5em;
+    h1{
+      font-size: 1em;
+      font-weight: 700;
+      line-height: 68px;
+      width: 50%;
+    }
+  }
+  .Video--List--container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 80px);
+    font-size: 1em;
+    @media (max-width: 600px) {
+      height: calc(100vh - 80px - 70px);
+    }
+    @media (max-width: 350px) {
+      padding: 30px 20px;
+    }
+    h1{
+      font-size: 0.72em;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .Video--List{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+.Home--ContainerNotAuth{
+  @extend .Home--Container;
+  flex-direction: column;
+  img{
+
+  }
+}

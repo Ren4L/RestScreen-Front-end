@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.ProfileIcon{
+  border-radius: 50%;
+  border: 1.5px solid #525060;
+}
+.container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(82, 80, 96, 1);
+  border-radius: 50px;
+
+  .icon{
+    width: 43px;
+    height: 43px;
+    border: 1px solid rgba(82, 80, 96, 1);
+    border-radius: 50%;
+  }
+
+  .ProfileIcon{
+    position: relative;
+    left: -2px;
+  }
+
+  .content{
+    color: white;
+    font-family: "Manrope", serif;
+    font-size: 20px;
+    margin: 0 25px 0 10px;
+  }
+}

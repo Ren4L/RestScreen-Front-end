@@ -1,0 +1,43 @@
+@import "../../index.scss";
+
+.container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  input{
+    padding: 10px 55px 10px 33px;
+    width: 100%;
+    border: 1px solid #525060;
+    border-radius: 24px;
+    background: transparent;
+    color: white;
+    font-family: "Manrope", serif;
+    font-size: 16px;
+  }
+  div:nth-child(even){
+    position: relative;
+    right: 47px;
+  }
+  div:first-child{
+    @media (max-width: 600px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      border-radius: 50%;
+      border: 1.5px solid #525060;
+      width: 43px;
+      height: 43px;
+    }
+  }
+  @media (max-width: 850px) {
+    width: 40%;
+  }
+  @media (max-width: 700px) {
+    width: 45%;
+  }
+  @media (max-width: 600px) {
+    width: auto;
+  }
+}

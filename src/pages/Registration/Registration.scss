@@ -1,0 +1,16 @@
+@import "../../index.scss";
+
+.Reg--Form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 5% 0;
+
+  .Reg__contract{
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    width: 75%;
+  }
+}

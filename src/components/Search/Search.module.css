@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+body {
+  background: #1f1e27;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 30%;
+}
+.container input {
+  padding: 10px 55px 10px 33px;
+  width: 100%;
+  border: 1px solid #525060;
+  border-radius: 24px;
+  background: transparent;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 16px;
+}
+.container div:nth-child(even) {
+  position: relative;
+  right: 47px;
+}
+@media (max-width: 600px) {
+  .container div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    border-radius: 50%;
+    border: 1.5px solid #525060;
+    width: 43px;
+    height: 43px;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    width: 40%;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: auto;
+  }
+}
+
+/*# sourceMappingURL=Search.module.css.map */

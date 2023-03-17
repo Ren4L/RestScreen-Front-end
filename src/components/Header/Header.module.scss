@@ -1,0 +1,30 @@
+@import "../../index.scss";
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-bottom: 2px solid #525060;
+  background: $colorOne;
+  .buttonContainer{
+    display: flex;
+    align-items: center;
+    button{
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 350px) {
+    padding: 15px 20px;
+  }
+}
+
+.profileAndLangContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  @media (max-width: 600px) {
+    width: 160px;
+  }
+}
