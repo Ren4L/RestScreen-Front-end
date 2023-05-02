@@ -10,13 +10,7 @@
   align-items: center;
   border: 1px solid rgba(82, 80, 96, 1);
   border-radius: 50px;
-
-  .icon{
-    width: 43px;
-    height: 43px;
-    border: 1px solid rgba(82, 80, 96, 1);
-    border-radius: 50%;
-  }
+  cursor: pointer;
 
   .ProfileIcon{
     position: relative;
@@ -28,5 +22,95 @@
     font-family: "Manrope", serif;
     font-size: 20px;
     margin: 0 25px 0 10px;
+  }
+}
+
+.containerModal{
+  position: absolute;
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+  background: #1F1E27;
+  border: 1px solid #525060;
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  top: 70px;
+  right: 40px;
+  min-width: 260px;
+
+  &Active{
+    display: flex;
+    padding: 20px;
+    z-index: 5;
+  }
+
+  .profileContainer{
+    display: flex;
+    align-items: center;
+  }
+
+  .nickContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  }
+
+  p:nth-child(odd){
+    font:{
+      family: "Manrope", serif;
+      weight: bold;
+      size: 18px;
+    }
+    color: white;
+    margin-bottom: 3px;
+  }
+  p:nth-child(even){
+    font:{
+      family: "Manrope", serif;
+      weight: 400;
+      size: 12px;
+    }
+    color: white;
+  }
+
+  .line{
+    border: 1px #525060 solid;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .buttonContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+  }
+
+  @media (max-width: 600px) {
+    right: 20px;
+  }
+  @media (max-width: 450px) {
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #525060;
+    box-shadow: none;
+  }
+}
+
+.icon{
+  min-width: 43px;
+  height: 43px;
+  border: 1px solid rgba(82, 80, 96, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  @media (max-width: 600px) {
+    margin-left: 20px;
+  }
+  @media (max-width: 400px) {
+    margin-left: 7px;
   }
 }

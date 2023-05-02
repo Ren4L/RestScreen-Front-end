@@ -1,6 +1,6 @@
 interface MenuAction {
     type:string;
-    payload?:IMenu;
+    payload?:boolean;
 }
 
 export interface IMenu{
@@ -15,6 +15,8 @@ export default (state = defaultState, action:MenuAction):IMenu => {
     switch (action.type) {
         case "changeData":
             return {...state, value:!state.value}
+        case "setData":
+            return {...state, value: action.payload}
         default:
             return state;
     }

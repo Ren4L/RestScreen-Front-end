@@ -16,16 +16,17 @@ module.exports = {
     entry: ["@babel/polyfill", './src/index.tsx'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "[name].[hash].js"
+        filename: "[name].[hash].js",
+        publicPath: "/",
     },
     devServer: {
         historyApiFallback: true,
-        port: 3000
+        port: 5050,
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./static/index.html",
-            favicon: "./static/logo.png"
+            favicon: "./static/logo.png",
         }),
         new MiniCssExtractPlugin({filename:'[name].[hash].css'}),
         new CleanWebpackPlugin(),

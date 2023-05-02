@@ -8,6 +8,7 @@ import Profile from "./Profile/Profile";
 import Input from "./Input/Input";
 import NavBar from "./NavBar/NavBar";
 import VideoBlock from "./VideoBlock/VideoBlock";
+import CircleButton from "./Button/CircleButton";
 
 
 
@@ -22,4 +23,5 @@ export {
     NavBar,
     VideoBlock,
     Button,
+    CircleButton,
 };

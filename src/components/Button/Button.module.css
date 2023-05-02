@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -109,7 +110,16 @@ img {
   left: 35px;
   transition: 1s ease-in-out;
 }
+.containerNav:hover .hollow, .containerNav:hover .hollowClose {
+  transition: none;
+  background: rgba(82, 80, 96, 0.3);
+}
+.containerNav:hover .hollowActive {
+  transition: none;
+  background: #525060;
+}
 .containerNav .hollow, .containerNav .hollowClose {
+  transition: width 1s ease-in-out;
   background: transparent;
   border: 1px solid #525060;
   border-radius: 24px;
@@ -118,13 +128,16 @@ img {
 .containerNav .hollow span, .containerNav .hollowClose span {
   margin-left: 32%;
 }
+.containerNav .hollowActive {
+  background: #525060;
+}
 .containerNav .hollowClose {
   background: #19181F;
 }
 .containerNav .hollowClose svg {
   z-index: 4;
 }
-@media (max-width: 850px) {
+@media (max-width: 851px) {
   .containerNav {
     transition: none;
     width: 38px;
@@ -142,21 +155,47 @@ img {
     left: 25px !important;
   }
 }
+@media (max-width: 850px) {
+  .containerNavNotBar svg {
+    left: 35px;
+  }
+  .containerNavNotBar button span {
+    left: 0 !important;
+  }
+}
 
 .container .orange, .container .orange--forgot {
   text-align: center;
   background: #FF4D00;
+  border: 1px #FF4D00 solid;
+  transition: all 0.3s ease-in-out;
+}
+.container .orange:hover, .container .orange--forgot:hover {
+  background: transparent;
 }
 .container .white {
   text-align: center;
   background: white;
+  transition: all 0.3s ease-in-out;
+}
+.container .white:hover {
+  background: #FF4D00;
+}
+.container .white:hover span {
+  color: white;
 }
 .container .white span {
+  transition: all 0.3s ease-in-out;
   color: black;
 }
 @media (max-width: 650px) {
   .container {
     width: 50%;
+  }
+}
+@media (max-width: 380px) {
+  .container {
+    width: 70%;
   }
 }
 
@@ -172,6 +211,25 @@ img {
 }
 .containerClose button span {
   left: 25px !important;
+}
+
+.CircleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid #525060;
+  margin-left: 20px;
+}
+@media (max-width: 400px) {
+  .CircleContainer {
+    margin-left: 7px;
+  }
+}
+.CircleContainerNotMargin {
+  margin: 0;
 }
 
 /*# sourceMappingURL=Button.module.css.map */

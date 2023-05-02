@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -76,10 +77,15 @@ img {
 
 .container {
   position: relative;
-  margin: 0;
+  margin-left: 20px;
   width: 50px;
   font-family: "Manrope", serif;
   z-index: 6;
+}
+@media (max-width: 400px) {
+  .container {
+    margin-left: 7px;
+  }
 }
 
 .activeLang {

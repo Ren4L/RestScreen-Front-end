@@ -25,7 +25,7 @@ const Authorization:FC = () => {
                 nickname:'Ren4L',
                 email:AuthForm.email,
                 id:1,
-                photo:''}})
+                photo:'https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c'}})
             navigate('/');
         }
         else if (ErrorForm !== result.message){

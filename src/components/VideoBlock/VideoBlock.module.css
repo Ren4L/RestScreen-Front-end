@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -93,7 +94,7 @@ img {
 }
 .container .timing {
   position: absolute;
-  top: 45%;
+  top: 10.7vw;
   right: 6%;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -101,17 +102,71 @@ img {
   font-family: "Manrope", serif;
   font-size: 12px;
 }
+@media (max-width: 1000px) {
+  .container .timing {
+    top: 14vw;
+  }
+}
+@media (max-width: 850px) {
+  .container .timing {
+    top: 12.5vw;
+    right: 8%;
+  }
+}
+@media (max-width: 800px) {
+  .container .timing {
+    top: 17.2vw;
+    right: 8%;
+  }
+}
+@media (max-width: 700px) {
+  .container .timing {
+    top: 20.5vw;
+    right: 8%;
+  }
+}
+@media (max-width: 600px) {
+  .container .timing {
+    top: 20.7vw;
+    right: 8%;
+  }
+}
+@media (max-width: 500px) {
+  .container .timing {
+    top: 40vw;
+    right: 8%;
+  }
+}
+@media (max-width: 350px) {
+  .container .timing {
+    top: 39vw;
+    right: 8%;
+  }
+}
 .container .favourity {
   position: absolute;
   top: 5%;
   right: 6%;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
+  z-index: 2;
+}
+.container .favourity:hover {
+  cursor: pointer;
+}
+.container .favourity:hover svg {
+  fill: white;
 }
 .container .favourity svg {
   width: 20px;
   height: 20px;
+}
+@media (max-width: 850px) {
+  .container .favourity {
+    top: 6%;
+    right: 8%;
+  }
 }
 @media (max-width: 1240px) {
   .container {
@@ -143,17 +198,22 @@ img {
   height: 12vw;
   margin-bottom: 10px;
 }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .container video {
-    height: 14vw;
+    height: 16vw;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 850px) {
+  .container video {
+    height: 15vw;
+  }
+}
+@media (max-width: 800px) {
   .container video {
     height: 20vw;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container video {
     height: 24vw;
   }

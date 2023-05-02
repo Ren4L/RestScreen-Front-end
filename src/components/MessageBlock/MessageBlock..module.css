@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+body {
+  background: #1f1e27;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 10px 20px;
+  border: 1px solid #525060;
+  border-top: 0;
+  background: #19181F;
+  font-size: 1em;
+  cursor: pointer;
+}
+.container:hover {
+  background: #2f2d38;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100vw;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    border-radius: 0 !important;
+    border: none;
+    border-top: 1px solid #525060;
+  }
+}
+
+.photo, .photoNull {
+  min-width: 70px;
+  height: 70px;
+  border-radius: 50% !important;
+}
+.photoNull {
+  border: 1px solid #525060;
+}
+.photoNull svg {
+  width: 65px;
+  height: 70px;
+}
+@media (max-width: 500px) {
+  .photoNull svg {
+    width: 47px;
+    height: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .photo, .photoNull {
+    min-width: 50px;
+    height: 50px;
+  }
+}
+
+.NickAndMessageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 45px;
+  margin-left: 20px;
+  font-size: 1em;
+}
+.NickAndMessageContainer .nickname {
+  font-size: 0.36em;
+  font-weight: bold;
+}
+.NickAndMessageContainer .message {
+  font-size: 0.32em;
+}
+
+.TimeAndCountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 45px;
+  font-size: 1em;
+}
+.TimeAndCountContainer .time {
+  font-size: 0.32em;
+}
+.TimeAndCountContainer .count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.26em;
+  width: 23px;
+  height: 23px;
+  border-radius: 50% !important;
+  border: 1.5px solid #525060;
+}
+
+/*# sourceMappingURL=MessageBlock..module.css.map */

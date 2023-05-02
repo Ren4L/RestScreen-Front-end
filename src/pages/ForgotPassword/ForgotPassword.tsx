@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
     return (
         <Fragment>
-            <Header type={'regAuthHome'}/>
+            <Header type={'auth'}/>
             <main className="Forgot--Form">
                 <form ref={FormRef} className='Form' onSubmit={submitReg}>
                     <h1 className='margin--el'>{t("Form.nameForgot")}</h1>

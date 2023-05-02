@@ -2,11 +2,15 @@
 
 .container {
   position: relative;
-  margin: 0;
+  margin-left: 20px;
   width: 50px;
   font-family: "Manrope", serif;
   z-index: 6;
+  @media (max-width: 400px) {
+    margin-left: 7px;
+  }
 }
+
 
 .activeLang{
   display: flex;

@@ -1,57 +1,94 @@
-import React, {FC, Fragment} from 'react';
+import React, {FC, Fragment, useEffect} from 'react';
 import styles from "./Header.module.scss";
-import {Button, Profile, Search, Select} from "@components";
+import {Button, CircleButton, NavButton, Profile, Search, Select} from "@components";
 import {useTranslation} from "react-i18next";
-import {useWindowSizeState} from "@hooks";
+import {useTypedSelector, useWindowSizeState} from "@hooks";
+import {Icons} from "@utils";
+import {useDispatch} from "react-redux";
 
 
 const AuthButtons:FC = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const {WindowSize} = useWindowSizeState();
+    useEffect(()=>{
+        dispatch({type:"setData", payload:true});
+    }, []);
     return (
         <div className={styles.buttonContainer}>
             <Select/>
-            <Button content={t("Button.home")} link='/'/>
-            <Button content={t("Button.signIn")} link='/Auth'/>
+            {
+                WindowSize > 850 ?
+                    <>
+                        <Button content={t("Button.signIn")} link='/Auth'/>
+                        <NavButton active={false} link="/" content={t("Button.toHome")}><Icons.Home/></NavButton>
+                    </>
+                    :
+                    <>
+                        <CircleButton link='/Auth'><Icons.Auth/></CircleButton>
+                        <CircleButton link='/'><Icons.Home/></CircleButton>
+                    </>
+            }
         </div>
     );
 };
 
 const RegButtons:FC = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const {WindowSize} = useWindowSizeState();
+    useEffect(()=>{
+        dispatch({type:"setData", payload:true});
+    }, []);
     return (
         <div className={styles.buttonContainer}>
             <Select/>
-            <Button content={t("Button.home")} link='/'/>
-            <Button style='white' content={t("Button.reg")} link='/Reg'/>
+            {
+                WindowSize > 850 ?
+                    <>
+                        <Button style='white' content={t("Button.reg")} link='/Reg'/>
+                        <NavButton active={false} link="/" content={t("Button.toHome")}><Icons.Home/></NavButton>
+                    </>
+                    :
+                    <>
+                        <CircleButton link='/Reg'><Icons.Reg/></CircleButton>
+                        <CircleButton link='/'><Icons.Home/></CircleButton>
+                    </>
+            }
         </div>
     );
 };
 
 const RegAuthButtons:FC = () => {
     const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const {WindowSize} = useWindowSizeState();
+    useEffect(()=>{
+        dispatch({type:"setData", payload:true});
+    }, []);
     return (
         <Fragment>
             <Search/>
             <div className={styles.buttonContainer}>
-                <Select/>
-                <Button style='white' content={t("Button.reg")} link='/Reg'/>
-                <Button content={t("Button.signIn")} link='/Auth'/>
+                {
+                    WindowSize > 1100 ?
+                        <>
+                            <Select/>
+                            <Button style='white' content={t("Button.reg")} link='/Reg'/>
+                            <Button content={t("Button.signIn")} link='/Auth'/>
+                        </>
+                        :
+                        <>
+                            <CircleButton link='/Reg'><Icons.Reg/></CircleButton>
+                            <CircleButton link='/Auth'><Icons.Auth/></CircleButton>
+                            <Select/>
+                        </>
+                }
             </div>
         </Fragment>
     );
 };
 
-const RegAuthHomeButtons:FC = () => {
-    const {t} = useTranslation();
-    return (
-        <div className={styles.buttonContainer}>
-            <Select/>
-            <Button content={t("Button.home")} link='/'/>
-            <Button style='white' content={t("Button.reg")} link='/Reg'/>
-            <Button content={t("Button.signIn")} link='/Auth'/>
-        </div>
-    );
-};
 
 const SearchPersonalButtons = () => {
     const {WindowSize} = useWindowSizeState();
@@ -66,7 +103,7 @@ const SearchPersonalButtons = () => {
                         </div>
                     </Fragment>
         else
-            return <div className={styles.profileAndLangContainer}>
+            return <div className={styles.profileAndLangContainerMobile}>
                         <Search/>
                         <Profile/>
                         <Select/>
@@ -80,6 +117,5 @@ export {
     AuthButtons,
     RegButtons,
     RegAuthButtons,
-    RegAuthHomeButtons,
     SearchPersonalButtons,
 };

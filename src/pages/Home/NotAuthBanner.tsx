@@ -7,7 +7,7 @@ const NotAuthBanner = () => {
     return (
         <div className="Not--Auth--Banner">
             <h1>{t("Home.banner")}</h1>
-            <img src={BannerImg}/>
+            <img className="Not--Auth--Img" src={BannerImg}/>
         </div>
     );
 };

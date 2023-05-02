@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 $colorOne: #1f1e27;
 $colorTwo: #FF4D00;
+$colorThree: #525060;
+$colorFour: #19181F;
+$colorHoverOne: #2f2d38;
 $success: #478D4B;
 $error: #FF1F0F;
 $formColor: #19181F;
@@ -18,7 +21,7 @@ input,button,textarea{font-family:inherit;}
 input::-ms-reveal,input::-ms-clear {display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a,a:visited{text-decoration: none;}
+a,a:visited{text-decoration: none; color: white}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}

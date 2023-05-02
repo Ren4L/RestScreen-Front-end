@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -91,19 +92,26 @@ img {
 }
 @media (max-width: 350px) {
   .container {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
 }
 
-.profileAndLangContainer {
+.profileAndLangContainer, .profileAndLangContainerMobile {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
 }
 @media (max-width: 600px) {
-  .profileAndLangContainer {
+  .profileAndLangContainer, .profileAndLangContainerMobile {
     width: 160px;
+  }
+}
+.profileAndLangContainerMobile {
+  width: 230px;
+}
+@media (max-width: 600px) {
+  .profileAndLangContainerMobile {
+    width: 230px;
   }
 }
 

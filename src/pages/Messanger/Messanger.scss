@@ -1,0 +1,69 @@
+@import "../../index.scss";
+
+.Message--List--container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden scroll;
+  font-size: 1em;
+
+  @media (max-width: 600px) {
+    height: calc(100vh - 80px - 70px);
+  }
+
+  @media (max-width: 500px) {
+    padding: 40px 0;
+    h1{
+      margin-left: 40px;
+    }
+  }
+
+  .Messages{
+    flex-grow: 0.6;
+    div:last-child{
+      border-radius: 0 0 20px 20px;
+    }
+    @media (max-width: 1035px) {
+      flex-grow: 1;
+    }
+  }
+  .Message--Category--Container{
+    position: relative;
+    font-size: 0.32em;
+    @media (max-width: 1035px) {
+      position: absolute;
+      right: calc(40px + 1vw);
+      top: 34vh;
+    }
+    @media (max-width: 850px) {
+      top: 33vh;
+    }
+    @media (max-width: 500px) {
+      right: 5px;
+    }
+    .Message--Category{
+      background: $colorFour;
+      padding: 20px 40px 20px 25px;
+      border: 1px solid $colorThree;
+      border-top: none;
+      cursor: pointer;
+      &:last-child{
+        border-radius: 0 0 20px 20px;
+      }
+
+      &:first-child{
+        border-top: 1px solid $colorThree;
+        border-radius: 20px 20px 0 0;
+      }
+      &:hover{
+        background: $colorHoverOne;
+      }
+      &--Active{
+        background: $colorThree;
+      }
+    }
+  }
+}

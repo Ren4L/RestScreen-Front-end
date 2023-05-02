@@ -75,22 +75,28 @@ img {
   vertical-align: top;
 }
 
-.LogoContainer {
+.Chat--container {
   display: flex;
-  align-items: center;
-  width: 170px;
-  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden scroll;
+  font-size: 1em;
 }
-@media (max-width: 850px) {
-  .LogoContainer {
-    width: 48px;
+.Chat--container .Chat {
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  background: #19181F;
+  border-radius: 20px;
+  border: 1px solid #525060;
+}
+@media (max-width: 600px) {
+  .Chat--container {
+    height: calc(100vh - 80px - 70px);
   }
 }
 
-.LogoContent {
-  font-size: 20px;
-  font-family: "Manrope", serif;
-  color: white;
-}
-
-/*# sourceMappingURL=Icons.module.css.map */
+/*# sourceMappingURL=Chat.css.map */

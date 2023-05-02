@@ -2,13 +2,16 @@
   "Button": {
     "signIn": "Войти",
     "reg": "Регистрация",
-    "forgot":"Восстановить пароль",
+    "forgot":"Восстановить пароль",
     "home": "Главная",
+    "toHome": "На главную",
     "close": "Закрыть",
     "messanger": "Сообщения",
     "mySubscribe": "Мои подписки",
     "friends": "Друзья",
-    "favourites": "Избранное"
+    "favourites": "Избранное",
+    "personalAccount": "Личный кабинет",
+    "exit": "Выйти"
   },
   "Input": {
     "search": "Поиск"
@@ -36,11 +39,34 @@
     "title1": "Оцени подборки",
     "title2": "Ваши рекомендации"
   },
+  "Messanger": {
+    "title": "Сообщения",
+    "category1": "Все чаты",
+    "category2": "Непрочитанные",
+    "category3": "Прочитанные",
+    "parameters": "Параметры"
+  },
+  "Chat": {
+    "title": "Чат"
+  },
   "CategoryVideo": {
     "nature": "Природа"
   },
   "Video": {
     "views": "просмотров",
     "back": "назад"
+  },
+  "Filter": {
+    "timing": "Длительность",
+    "less4": "Меньше 4-х минут",
+    "from4to20": "4-20 минут",
+    "more20": "Более 20 минут",
+    "dateDownload": "Дата загрузки",
+    "lastHour": "Последний час",
+    "today": "Сегодня",
+    "atThisWeek": "На этой неделе",
+    "atThisMonth": "Этим месяцем",
+    "atThisYear": "Этим годом",
+    "sorting": "Сортировать по"
   }
 }

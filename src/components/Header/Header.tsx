@@ -1,6 +1,6 @@
 import React, {ReactNode, useEffect, useState} from 'react';
 import {Icons} from "@utils";
-import {AuthButtons, RegAuthButtons, RegAuthHomeButtons, RegButtons, SearchPersonalButtons} from "./HeaderButtons";
+import {AuthButtons, RegAuthButtons, RegButtons, SearchPersonalButtons} from "./HeaderButtons";
 
 import styles from "./Header.module.scss";
 import {useWindowSizeState} from "@hooks";
@@ -20,8 +20,6 @@ const Header = ({type = "auth"}:IHeader) => {
                 return <RegButtons/>;
             case "regAuth":
                 return <RegAuthButtons/>;
-            case "regAuthHome":
-                return <RegAuthHomeButtons/>
             case "searchPersonal":
                 return <SearchPersonalButtons/>;
         }

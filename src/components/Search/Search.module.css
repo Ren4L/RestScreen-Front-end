@@ -60,6 +60,7 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
@@ -74,28 +75,34 @@ img {
   vertical-align: top;
 }
 
-.container {
+.container, .containerSize {
   display: flex;
   align-items: center;
   position: relative;
-  width: 30%;
+  width: 40%;
 }
-.container input {
+.container .iconSearch, .containerSize .iconSearch {
+  width: 24px;
+}
+.container input, .containerSize input {
   padding: 10px 55px 10px 33px;
-  width: 100%;
   border: 1px solid #525060;
   border-radius: 24px;
+  width: 100%;
   background: transparent;
   color: white;
   font-family: "Manrope", serif;
   font-size: 16px;
 }
-.container div:nth-child(even) {
+.container input::-webkit-search-cancel-button, .containerSize input::-webkit-search-cancel-button {
+  appearance: none;
+}
+.container div:nth-child(even), .containerSize div:nth-child(even) {
   position: relative;
   right: 47px;
 }
 @media (max-width: 600px) {
-  .container div:first-child {
+  .container div:first-child, .containerSize div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,20 +113,283 @@ img {
     height: 43px;
   }
 }
+@media (min-width: 1100px) {
+  .container, .containerSize {
+    margin-left: 20px;
+  }
+}
 @media (max-width: 850px) {
-  .container {
+  .container, .containerSize {
     width: 40%;
   }
 }
 @media (max-width: 700px) {
-  .container {
+  .container, .containerSize {
     width: 45%;
   }
 }
 @media (max-width: 600px) {
-  .container {
-    width: auto;
+  .container, .containerSize {
+    width: 100%;
+    justify-content: flex-end;
   }
+}
+@media (max-width: 400px) {
+  .container, .containerSize {
+    margin-left: 7px;
+  }
+}
+.containerSize {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100vw;
+  height: 78px;
+  overflow: hidden;
+  background: #1f1e27;
+  z-index: 10;
+  transition: top 0.8s ease-in-out;
+  margin: 0;
+  padding: 0 40px;
+}
+@media (max-width: 350px) {
+  .containerSize {
+    padding: 0 20px;
+  }
+}
+.containerSize div:nth-child(even) {
+  position: static;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .containerSize div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    border-radius: 0;
+    border: none;
+    width: 60vw;
+    height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .containerSize div:first-child {
+    width: 50vw;
+  }
+}
+.containerSize div:first-child div {
+  position: absolute;
+  left: 59%;
+}
+@media (max-width: 400px) {
+  .containerSize div:first-child div {
+    left: 48%;
+  }
+}
+@media (max-width: 350px) {
+  .containerSize div:first-child div {
+    left: 44%;
+  }
+}
+.containerSizeActive {
+  left: 0;
+  top: 0;
+}
+.containerSizeActive input {
+  width: 70%;
+}
+@media (max-width: 600px) {
+  .containerSizeActive input {
+    width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 28.5%;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #1F1E27;
+  border: 1px solid #525060;
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  z-index: 5;
+}
+@media (max-width: 1350px) {
+  .modal {
+    left: 24%;
+  }
+}
+@media (max-width: 1200px) {
+  .modal {
+    left: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  .modal {
+    left: 17%;
+  }
+}
+@media (max-width: 1000px) {
+  .modal {
+    left: 14%;
+  }
+}
+@media (max-width: 900px) {
+  .modal {
+    left: 11%;
+  }
+}
+@media (max-width: 800px) {
+  .modal {
+    left: 8%;
+  }
+}
+@media (max-width: 700px) {
+  .modal {
+    left: 5%;
+  }
+}
+@media (max-width: 850px) {
+  .modal {
+    left: 5%;
+  }
+}
+@media (max-width: 680px) {
+  .modal {
+    left: 0;
+    width: 100vw;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #525060;
+    box-shadow: none;
+  }
+}
+@media (max-width: 600px) {
+  .modal {
+    flex-direction: column;
+    align-items: center;
+    height: 80.6vh;
+  }
+}
+.modal label {
+  cursor: pointer;
+}
+.modal input[type=radio] {
+  cursor: pointer;
+  margin-right: 7px;
+  transform: translateY(2px);
+}
+.modal input[type=radio]:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #1F1E27;
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #525060;
+}
+.modal input[type=radio]:checked:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #525060;
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #525060;
+}
+.modalActive {
+  display: flex;
+}
+.modal .radioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px;
+  min-width: 200px;
+}
+.modal .radioContainer p {
+  font-family: "Manrope", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 127.6%;
+  color: white;
+}
+.modal .radioContainer span {
+  font-family: "Manrope", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 127.6%;
+  color: white;
+}
+.modal .radioContainer label {
+  margin-bottom: 7px;
+}
+.modal .radioContainer hr {
+  margin: 15px 0;
+}
+
+.containerSearchMessage {
+  display: flex;
+  align-items: center;
+  padding: 17px 28px;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #525060;
+  background: #19181F;
+  font-size: 16px;
+}
+@media (max-width: 500px) {
+  .containerSearchMessage {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #525060;
+    padding: 17px 10px;
+  }
+}
+.containerSearchMessage .parameters {
+  font-size: 1em;
+  cursor: pointer;
+}
+.containerSearchMessage .parameters svg {
+  margin-left: 5px;
+}
+.containerSearchMessage input {
+  padding: 0 0 0 20px;
+  flex-grow: 1;
+  background: transparent;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 1em;
+}
+.containerSearchMessage input::-webkit-search-cancel-button {
+  appearance: none;
+}
+@media (max-width: 500px) {
+  .containerSearchMessage input {
+    width: 50%;
+    margin-right: 10px;
+  }
+}
+.containerSearchMessage div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=Search.module.css.map */

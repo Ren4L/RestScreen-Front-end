@@ -1,6 +1,6 @@
 @import "../../index.scss";
 
-.Home--Container{
+.Container{
   display: flex;
   align-items: flex-start;
   width: 100vw;
@@ -14,7 +14,13 @@
     flex-direction: column-reverse;
   }
   @media (max-width: 500px) {
-    font-size: 35px;
+    font-size: 40px;
+  }
+
+  h1{
+    font-size: 0.72em;
+    font-weight: bold;
+    margin-bottom: 40px;
   }
   .Not--Auth--Banner{
     display: flex;
@@ -23,31 +29,38 @@
     width: 100%;
     padding: 5% 0;
     font-size: 1.5em;
-    h1{
+    @media (max-width: 450px) {
       font-size: 1em;
-      font-weight: 700;
-      line-height: 68px;
-      width: 50%;
     }
+    @media (max-width: 350px) {
+      font-size: 0.9em;
+    }
+    @media (max-width: 680px) {
+      flex-direction: column;
+      .Not--Auth--Img{
+        width: 100%;
+      }
+    }
+
   }
   .Video--List--container{
     display: flex;
     flex-direction: column;
     padding: 40px;
     width: 100%;
-    overflow: scroll;
+    overflow: hidden scroll;
     height: calc(100vh - 80px);
     font-size: 1em;
     @media (max-width: 600px) {
       height: calc(100vh - 80px - 70px);
     }
-    @media (max-width: 350px) {
-      padding: 30px 20px;
+    &--NotAuth{
+      @media (max-width: 600px) {
+        height: calc(100vh - 80px);
+      }
     }
-    h1{
-      font-size: 0.72em;
-      font-weight: bold;
-      margin-bottom: 40px;
+    @media (max-width: 350px) {
+      padding: 30px 10px;
     }
     .Video--List{
       display: grid;
@@ -56,20 +69,22 @@
       @media (max-width: 1000px) {
         grid-template-columns: repeat(3, 1fr);
       }
-      @media (max-width: 700px) {
+      @media (max-width: 800px) {
         grid-template-columns: repeat(2, 1fr);
       }
       @media (max-width: 500px) {
         grid-template-columns: repeat(1, 1fr);
       }
+      &--Open--Menu{
+        grid-template-columns: repeat(4, 1fr);
+        @media (max-width: 1300px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: 1000px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
     }
   }
 }
 
-.Home--ContainerNotAuth{
-  @extend .Home--Container;
-  flex-direction: column;
-  img{
-
-  }
-}

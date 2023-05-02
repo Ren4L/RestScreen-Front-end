@@ -21,11 +21,17 @@ export interface INavButton {
     content:string,
     link?:string,
     id?:string,
+    active?: boolean,
+    notBar?: boolean,
     css?:CSSProperties,
     onClick?:MouseEventHandler<HTMLDivElement>,
     children?:ReactNode
 }
 
+export interface IProfilIcon {
+    className?:string,
+    handleClick?:MouseEventHandler
+}
 
 export interface IButton {
     content:string,
@@ -47,4 +53,20 @@ export interface IUser{
     nickname?:string,
     mail?:string,
     photo?:string,
+}
+
+export interface ICircleButton{
+    children:ReactNode,
+    link?:string
+    handleClick?:MouseEventHandler,
+    margin?: boolean,
+}
+
+export interface IMessageBlock{
+    id: number,
+    photo?:string,
+    nickname: string,
+    time:Date,
+    lastMessage: string,
+    countMessage?: number,
 }

@@ -41,27 +41,45 @@
     transition: 1s ease-in-out;
   }
 
+
+  &:hover{
+    .hollow{
+      transition: none;
+      background: rgba(82, 80, 96, 0.3);
+    }
+    //.hollowClose{
+    //  transition: none;
+    //  background: rgba(25, 24, 31, 0.1);
+    //}
+    .hollowActive{
+      transition: none;
+      background: $colorThree;
+    }
+  }
+
   .hollow{
     @extend %Button;
+    transition: width 1s ease-in-out;
     background: transparent;
-    border: 1px solid #525060;
+    border: 1px solid $colorThree;
     border-radius: 24px;
     font-size: 16px;
     span{
       margin-left: 32%;
     }
-
+    &Active{
+      background: $colorThree;
+    }
     &Close{
       svg{
         z-index: 4;
       }
       @extend .hollow;
       background: #19181F;
-
     }
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 851px) {
     transition: none;
     width: 38px;
     height: 38px;
@@ -79,6 +97,19 @@
       }
     }
   }
+
+  &NotBar{
+    @media (max-width: 850px) {
+      svg{
+        left: 35px;
+      }
+      button{
+        span{
+          left: 0 !important;
+        }
+      }
+    }
+  }
 }
 
 .container{
@@ -86,6 +117,11 @@
   .orange{
     @extend %Button;
     @include text-background($colorTwo);
+    border: 1px $colorTwo solid;
+    transition: all .3s ease-in-out;
+    &:hover{
+      background: transparent;
+    }
     &--forgot{
       @extend .orange;
     }
@@ -94,13 +130,24 @@
   .white{
     @extend %Button;
     @include text-background(white);
+    transition: all .3s ease-in-out;
+    &:hover{
+      background: $colorTwo;
+      span{
+        color: white;
+      }
+    }
     span{
+      transition: all .3s ease-in-out;
       color: black;
     }
   }
 
   @media (max-width: 650px) {
     width: 50%;
+  }
+  @media (max-width: 380px) {
+    width: 70%;
   }
 }
 
@@ -121,3 +168,19 @@
   }
 }
 
+.CircleContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid #525060;
+  margin-left: 20px;
+  @media (max-width: 400px) {
+    margin-left: 7px;
+  }
+  &NotMargin{
+    margin: 0;
+  }
+}

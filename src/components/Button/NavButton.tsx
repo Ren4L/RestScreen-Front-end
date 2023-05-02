@@ -5,13 +5,13 @@ import {Types} from '@utils';
 import {useTypedSelector} from "@hooks";
 
 
-const NavButton = ({content = '', id='', onClick, link, css, children }:Types.INavButton) => {
+const NavButton = ({content = '', id='', notBar = false, active = false, onClick, link, css, children }:Types.INavButton) => {
     const navigate:NavigateFunction = useNavigate();
-    const menuSelector = useTypedSelector(state => state.menu)
+    const menuSelector = css ? {value:true} : useTypedSelector(state => state.menu);
     return (
-        <div id={id} className={`${styles.containerNav} ${!menuSelector.value ? styles.containerClose : ''}`} onClick={link ? () => navigate(link) : onClick }>
+        <div style={css} id={id} className={`${styles.containerNav} ${!menuSelector.value ? styles.containerClose : ''} ${notBar ? styles.containerNavNotBar : ''}`} onClick={link ? () => navigate(link) : onClick }>
             {children}
-            <button style={css} className={!onClick ? styles.hollow : styles.hollowClose}>
+            <button className={`${!onClick ? styles.hollow : styles.hollowClose} ${active ? styles.hollowActive : ''}`}>
                 <span>{content}</span>
             </button>
         </div>
