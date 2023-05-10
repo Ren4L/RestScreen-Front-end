@@ -11,7 +11,7 @@
   border-radius: 20px;
   font-size: 16px;
   padding: 10px;
-
+  cursor: pointer;
   &Hover{
     transform: scale(1.2);
     background: #19181F;
@@ -20,13 +20,15 @@
 
   .timing{
     position: absolute;
-    top: 10.7vw;
-    right: 6%;
+    top: 10.4vw;
+    right: 8%;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 5px 10px;
     font-family: "Manrope", serif;
     font-size: 12px;
+    max-width: 52px;
+    max-height: 22px;
     @media (max-width: 1000px) {
       top: 14vw;
     }
@@ -58,8 +60,8 @@
 
   .favourity{
     position: absolute;
-    top: 5%;
-    right: 6%;
+    top: 7%;
+    right: 8%;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 5px;
@@ -138,6 +140,7 @@
       justify-content: space-between;
       width: 100%;
       font-size: 0.875em;
+      padding: 10px 0;
     }
     .authorContainer{
       display: flex;
@@ -145,6 +148,7 @@
       justify-content: flex-start;
       width: 100%;
       font-size: 1em;
+      cursor: pointer;
       .photo{
         width: 45px;
         height: 45px;
@@ -157,9 +161,114 @@
         margin-left: 10px;
       }
     }
-    .padding{
-      padding-bottom: 10px;
+  }
+
+}
+
+.containerInline{
+  @extend .container;
+  flex-direction: row;
+  align-items: center;
+  background: $colorFour;
+  height: auto;
+  padding: 45px 35px;
+  font-size: 1em;
+  transition: none;
+  margin-bottom: 20px;
+
+  @media (max-width: 600px) {
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid $colorThree;
+    padding: 40px 10px;
+    .count{
+      display: none;
     }
   }
 
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
+
+  &:hover{
+    transform: none;
+    background: $colorHoverOne;
+  }
+
+  .videoCont{
+    display: flex;
+    position: relative;
+    height: 100%;
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
+
+  .video{
+    margin: 0;
+    height: 100%;
+  }
+
+  .favourity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+  }
+
+  .timing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.24em;
+    bottom: 15px;
+    right: 15px;
+    top: auto;
+   }
+
+  .count{
+    font-size: 0.36em;
+    font-weight: bold;
+    padding-right: 20px;
+    opacity: 0.5;
+  }
+
+  .infContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1em;
+    padding-left: 20px;
+    height: 100%;
+
+    @media (max-width: 400px) {
+      padding: 20px 0 0;
+    }
+
+    .category{
+      font-size: 0.32em;
+    }
+
+    .title{
+      font-weight: bold;
+      font-size: 0.36em;
+    }
+
+    .timeAndViewsContainer{
+      font-size: 0.32em;
+      justify-content: flex-start;
+      .timeAgo{
+        padding-left: 20px;
+      }
+    }
+
+    .authorContainer{
+      font-size: 1em;
+      .name{
+        font-size: 0.32em;
+      }
+    }
+  }
 }

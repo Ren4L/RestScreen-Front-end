@@ -75,6 +75,11 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+}
+
 .Container {
   display: flex;
   align-items: flex-start;

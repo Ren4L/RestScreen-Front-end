@@ -1,3 +1,4 @@
+@import "../../index.scss";
 .container{
   display: flex;
   flex-direction: column;
@@ -21,14 +22,19 @@
   }
   &Adaptive600{
     @extend .container;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: auto;
-    border-right: 0;
+    border: none;
     border-top: 2px solid #525060;
     padding: 15px 40px;
     transition: none;
+    z-index: 3;
+    background: $colorOne;
 
     @media (max-width: 350px) {
       padding: 15px 20px;
@@ -42,5 +48,23 @@
   }
   .Burger{
     margin-bottom: 14px;
+  }
+  footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 0.32em;
+    align-self: center;
+    flex-grow: 1;
+    opacity: 1;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out,
+                width 1s ease-in-out;
+  }
+
+  .footerOff{
+    opacity: 0;
+    width: 0;
   }
 }

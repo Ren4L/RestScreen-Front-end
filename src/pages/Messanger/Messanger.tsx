@@ -6,6 +6,7 @@ import MessageBlock from "../../components/MessageBlock/MessageBlock";
 import SearchMessage from "../../components/Search/SearchMessage";
 import {useTypedSelector, useWindowSizeState} from "@hooks";
 
+
 const Messanger = () => {
     const {t} = useTranslation();
     const {WindowSize} = useWindowSizeState();
@@ -31,62 +32,6 @@ const Messanger = () => {
                         />
                         <MessageBlock
                             id={2}
-                            nickname="MSTkrut"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                        />
-                        <MessageBlock
-                            id={3}
-                            photo="https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"
-                            nickname="Dantey"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                            countMessage={2}
-                        />
-                        <MessageBlock
-                            id={10}
-                            nickname="MSTkrut"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                        />
-                        <MessageBlock
-                            id={11}
-                            photo="https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"
-                            nickname="Dantey"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                            countMessage={2}
-                        />
-                        <MessageBlock
-                            id={4}
-                            nickname="MSTkrut"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                        />
-                        <MessageBlock
-                            id={5}
-                            photo="https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"
-                            nickname="Dantey"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                            countMessage={2}
-                        />
-                        <MessageBlock
-                            id={6}
-                            nickname="MSTkrut"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                        />
-                        <MessageBlock
-                            id={7}
-                            photo="https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"
-                            nickname="Dantey"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-                            time={new Date(Date.now())}
-                            countMessage={2}
-                        />
-                        <MessageBlock
-                            id={8}
                             nickname="MSTkrut"
                             lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                             time={new Date(Date.now())}

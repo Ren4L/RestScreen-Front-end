@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+body {
+  background: #1f1e27;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
+.Video--container {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 1em;
+}
+@media (max-width: 1000px) {
+  .Video--container {
+    min-height: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .Video--container {
+    min-height: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .Video--container {
+    border-radius: 0;
+  }
+}
+@media (max-width: 450px) {
+  .Video--container {
+    min-height: 220px;
+  }
+}
+.Video--container .Loader {
+  width: 15%;
+}
+.Video--container .Loader--container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: transparent;
+}
+.Video--container .Player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.Video--container .element--control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 22px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.Video--container .element--control:hover {
+  opacity: 1;
+}
+.Video--container .element--control input[type=range] {
+  width: 100%;
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #525060;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Video--container .element--control input[type=range]::-webkit-slider-runnable-track {
+  height: 7px;
+  -webkit-appearance: none;
+  color: #525060;
+  margin-top: -1px;
+}
+.Video--container .element--control input[type=range]::-webkit-slider-thumb {
+  width: 0;
+  height: 7px;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  background: transparent;
+  box-shadow: -2000px 0 0 2000px #FF4D00;
+}
+.Video--container .element--control input[type=range]::-moz-range-progress {
+  background-color: #FF4D00;
+}
+.Video--container .element--control input[type=range]::-moz-range-track {
+  background-color: #525060;
+}
+.Video--container .element--control input[type=range]::-ms-fill-lower {
+  background-color: #FF4D00;
+}
+.Video--container .element--control input[type=range]::-ms-fill-upper {
+  background-color: #525060;
+}
+.Video--container .element--control .footer--element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1em;
+  padding-top: 10px;
+}
+.Video--container .element--control .footer--element .right--container, .Video--container .element--control .footer--element .left--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 0.05;
+  font-size: 1em;
+}
+.Video--container .element--control .footer--element .right--container .Video--timing, .Video--container .element--control .footer--element .left--container .Video--timing {
+  font-size: 0.32em;
+}
+.Video--container .element--control .footer--element .left--container {
+  flex-grow: 0.02;
+}
+.Video--container .element--control .footer--element .left--container .video--2x {
+  cursor: pointer;
+  font-size: 0.4em;
+  font-weight: bold;
+}
+.Video--container .element--control .footer--element .left--container .video--2x--active {
+  color: #FF4D00;
+}
+
+/*# sourceMappingURL=Player.css.map */

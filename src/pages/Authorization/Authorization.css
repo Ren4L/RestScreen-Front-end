@@ -75,12 +75,36 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .Auth--Form {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   padding: 50px 0;
+  font-size: 1em;
 }
 
 .Form {
@@ -91,11 +115,11 @@ img {
   padding: 50px 40px;
   background: #19181F;
   border: 1px solid #C4C4C4;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
   color: white;
   font-family: "Manrope", serif;
-  font-size: 16px;
+  font-size: 1em;
 }
 @media (max-width: 1000px) {
   .Form {
@@ -133,6 +157,9 @@ img {
   width: 60%;
   padding-left: 20px;
   margin-bottom: 10px;
+}
+.Form__foot--button {
+  font-size: 0.32em;
 }
 .Form__foot--button a {
   color: #FF4D00;

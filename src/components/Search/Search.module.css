@@ -75,6 +75,29 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .container, .containerSize {
   display: flex;
   align-items: center;
@@ -100,6 +123,10 @@ img {
 .container div:nth-child(even), .containerSize div:nth-child(even) {
   position: relative;
   right: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 24px;
 }
 @media (max-width: 600px) {
   .container div:first-child, .containerSize div:first-child {
@@ -130,7 +157,7 @@ img {
 }
 @media (max-width: 600px) {
   .container, .containerSize {
-    width: 100%;
+    width: 40%;
     justify-content: flex-end;
   }
 }
@@ -277,8 +304,12 @@ img {
     height: 80.6vh;
   }
 }
-.modal label {
+.modal .labelCont {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  max-width: 100%;
+  height: 16px;
 }
 .modal input[type=radio] {
   cursor: pointer;
@@ -345,7 +376,7 @@ img {
   margin: 15px 0;
 }
 
-.containerSearchMessage {
+.containerSearchMessage, .containerSearchMessageMedia {
   display: flex;
   align-items: center;
   padding: 17px 28px;
@@ -354,22 +385,14 @@ img {
   background: #19181F;
   font-size: 16px;
 }
-@media (max-width: 500px) {
-  .containerSearchMessage {
-    border-radius: 0;
-    border: none;
-    border-top: 1px solid #525060;
-    padding: 17px 10px;
-  }
-}
-.containerSearchMessage .parameters {
+.containerSearchMessage .parameters, .containerSearchMessageMedia .parameters {
   font-size: 1em;
   cursor: pointer;
 }
-.containerSearchMessage .parameters svg {
+.containerSearchMessage .parameters svg, .containerSearchMessageMedia .parameters svg {
   margin-left: 5px;
 }
-.containerSearchMessage input {
+.containerSearchMessage input, .containerSearchMessageMedia input {
   padding: 0 0 0 20px;
   flex-grow: 1;
   background: transparent;
@@ -377,19 +400,51 @@ img {
   font-family: "Manrope", serif;
   font-size: 1em;
 }
-.containerSearchMessage input::-webkit-search-cancel-button {
+.containerSearchMessage input::-webkit-search-cancel-button, .containerSearchMessageMedia input::-webkit-search-cancel-button {
   appearance: none;
 }
 @media (max-width: 500px) {
-  .containerSearchMessage input {
+  .containerSearchMessage input, .containerSearchMessageMedia input {
     width: 50%;
     margin-right: 10px;
   }
 }
-.containerSearchMessage div {
+.containerSearchMessage div, .containerSearchMessageMedia div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .containerSearchMessageMedia {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #525060;
+    padding: 17px 10px;
+  }
+}
+
+.containerSearchFriends {
+  font-size: 1em;
+  width: 100%;
+  padding: 20px 25px;
+  border-bottom: 1px solid #525060;
+}
+.containerSearchFriends div {
+  border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .containerSearchFriends {
+    padding: 0;
+  }
+  .containerSearchFriends div {
+    border-radius: 0;
+    border: 0;
+    padding: 17px 20px;
+  }
+  .containerSearchFriends div div {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=Search.module.css.map */

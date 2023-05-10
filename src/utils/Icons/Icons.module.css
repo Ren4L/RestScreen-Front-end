@@ -75,6 +75,29 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .LogoContainer {
   display: flex;
   align-items: center;
@@ -91,6 +114,45 @@ img {
   font-size: 20px;
   font-family: "Manrope", serif;
   color: white;
+}
+
+.Plus:hover {
+  position: relative;
+}
+.Plus:hover rect {
+  fill: #2f2d38;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.Volume {
+  position: absolute;
+  z-index: 1;
+}
+.Volume input[type=range] {
+  transform: rotate(-90deg) scaleX(2.3) scaleY(1.5) translateX(135%);
+}
+
+.Favorite:hover {
+  fill: white;
+}
+
+.Like, .Dislike {
+  min-width: 24px;
+}
+.Like:hover, .Dislike:hover {
+  fill: white;
+}
+
+.Dislike {
+  transform: scale(-1, -1);
 }
 
 /*# sourceMappingURL=Icons.module.css.map */

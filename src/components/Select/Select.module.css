@@ -75,6 +75,29 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .container {
   position: relative;
   margin-left: 20px;
@@ -84,6 +107,7 @@ img {
 }
 @media (max-width: 400px) {
   .container {
+    padding-left: 7px;
     margin-left: 7px;
   }
 }

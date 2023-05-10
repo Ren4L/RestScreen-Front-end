@@ -1,0 +1,213 @@
+@import "../../index.scss";
+@import "../Home/Home.scss";
+
+.Profile--List--container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden scroll;
+  font-size: 1em;
+  @media (max-width: 600px) {
+    padding: 40px 0;
+    height: calc(100vh - 80px - 70px);
+    h1{
+      margin: 0 0 40px 10px;
+    }
+  }
+
+  .Video--List{
+    padding-top: 40px;
+  }
+
+  .Information--block{
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    padding: 25px 0;
+    border-bottom: 1px solid $colorThree;
+
+    @media (max-width: 600px) {
+      padding: 10px 25px;
+    }
+    &--social{
+      margin-top: 10px;
+      font-size: 0.32em;
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+
+    &--title{
+      display: flex;
+      font-weight: bold;
+      font-size: 0.36em;
+    }
+
+    &--content{
+      display: flex;
+      margin-top: 10px;
+      font-size: 0.32em;
+    }
+
+    &--container{
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+    }
+  }
+
+  .Profile--banner{
+    display: flex;
+    border-radius: 20px;
+    width: 100%;
+    min-height: 40%;
+    @media (max-width: 600px) {
+      border-radius: 0;
+    }
+  }
+
+  .Profile--inf{
+    position: relative;
+    top: -10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+    font-size: 1em;
+    width: 95%;
+
+    @media (max-width: 1050px) {
+      top: -5%;
+    }
+
+    @media (max-width: 490px) {
+      flex-direction: column;
+      width: 100%;
+      top: -13%;
+    }
+    &--name{
+      font-size: 0.48em;
+      font-weight: bold;
+    }
+    &--subscribeAndVideo{
+      display: flex;
+      font-size: 0.32em;
+      &:last-child{
+        margin-left: 20px;
+      }
+      @media (max-width: 1050px) {
+        margin: 10px 0;
+      }
+      @media (max-width: 490px) {
+        justify-content: center;
+      }
+      &Container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 490px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--content{
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+      width: 100%;
+      margin-left: 20px;
+      padding-top: 40px;
+      @media (max-width: 490px) {
+        padding-top: 20px;
+        align-items: center;
+        margin: 0;
+      }
+      .Profile--name{
+        font-size: 0.72em;
+        font-weight: bold;
+      }
+      .Profile--inf--partTwo{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media (max-width: 1050px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        @media (max-width: 650px) {
+          div:last-child{
+            width: 100%;
+          }
+        }
+        @media (max-width: 600px) {
+          div:last-child{
+            width: 50%;
+          }
+        }
+        @media (max-width: 490px) {
+          align-items: center;
+          div:last-child{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .photo{
+    min-width: 170px;
+    height: 170px;
+    border-radius: 50% !important;
+    &Null{
+      @extend .photo;
+      border: 1px solid $colorThree;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $colorFour;
+      svg{
+        width: 170px;
+        height: 170px;
+        @media (max-width: 600px) {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      min-width: 120px;
+      height: 120px;
+    }
+  }
+
+  .Profile--bookmarks{
+    font-size: 0.32em;
+    background: $colorFour;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 20px;
+    margin-right: 6px;
+    cursor: pointer;
+    &:hover{
+      background: $colorHoverOne;
+    }
+
+    &--active{
+      border: 1px solid $colorThree;
+      border-bottom: 0;
+      background: $colorFive;
+      &:hover{
+        background: $colorFive;
+      }
+    }
+    &--container{
+      display: flex;
+      border-bottom: 1px solid $colorThree;
+      width: 100%;
+      font-size: 1em;
+    }
+  }
+}

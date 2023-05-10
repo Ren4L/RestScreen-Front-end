@@ -19,7 +19,7 @@ const Home = () => {
 
     }, [WindowSize])
     return (
-        <Fragment>
+        <>
             {!user.nickname ? <Header type='regAuth'/> : <Header type='searchPersonal'/>}
             <main className='Container'>
                 {!user.nickname ? '' : <NavBar activeButton={0}/>}
@@ -27,15 +27,22 @@ const Home = () => {
                     {!user.nickname ? <NotAuthBanner/> : ''}
                     <h1>{!user.nickname ? t("Home.title1") : t("Home.title2")}</h1>
                     <div className={`Video--List${menu.value && WindowSize > 850 ? ' Video--List--Open--Menu' : ''}`}>
-                        <VideoBlock/>
-                        <VideoBlock/>
-                        <VideoBlock poster='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png'/>
-                        <VideoBlock/>
-                        <VideoBlock/>
+                        <VideoBlock
+                            id={1}
+                            poster='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png'
+                            url='https://firebasestorage.googleapis.com/v0/b/netconnectv2-9fd5b.appspot.com/o/files%2FSmallville%20(2001)_s01e01_720p.mp4?alt=media&token=f28a1ff0-b3d4-4adf-924a-ba5759e0c70f'
+                            category='nature'
+                            title="Прекрасные явления природы в мире пустыни"
+                            datePublic={new Date('05.05.2023')}
+                            views={101121}
+                            authorId={1}
+                            authorName="Dantey"
+                            authorPhoto="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
+                        />
                     </div>
                 </div>
             </main>
-        </Fragment>
+        </>
     );
 };
 

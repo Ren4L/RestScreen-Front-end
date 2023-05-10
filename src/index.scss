@@ -3,6 +3,7 @@ $colorOne: #1f1e27;
 $colorTwo: #FF4D00;
 $colorThree: #525060;
 $colorFour: #19181F;
+$colorFive: #121116;
 $colorHoverOne: #2f2d38;
 $success: #478D4B;
 $error: #FF1F0F;
@@ -25,3 +26,20 @@ a,a:visited{text-decoration: none; color: white}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
+
+.root{
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+  @media (max-width: 850px) {
+    font-size: 40px;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
+}

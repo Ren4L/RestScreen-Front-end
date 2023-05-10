@@ -9,11 +9,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  font-size: 1em;
   width: 225px;
   height: 38px;
+
 }
 
 %Button {
+  font-size: 1em;
   font-family: "Manrope", serif;
   padding: 10px 0;
   border-radius: 30px;
@@ -25,10 +28,13 @@
   span{
     position: relative;
     left: 0;
-    top: -2px;
+    top: -40px;
     color: white;
-    font-size: 16px;
+    font-size: 0.32em;
     transition: 1s ease-in-out;
+    @media (max-width: 850px) {
+      top: -29px;
+    }
   }
 }
 
@@ -63,7 +69,7 @@
     background: transparent;
     border: 1px solid $colorThree;
     border-radius: 24px;
-    font-size: 16px;
+    font-size: 1em;
     span{
       margin-left: 32%;
     }
@@ -114,9 +120,11 @@
 
 .container{
   @extend %container;
+  font-size: 1em;
   .orange{
     @extend %Button;
     @include text-background($colorTwo);
+    font-size: 1em;
     border: 1px $colorTwo solid;
     transition: all .3s ease-in-out;
     &:hover{
@@ -124,6 +132,17 @@
     }
     &--forgot{
       @extend .orange;
+    }
+    &--subscribe{
+      @extend .orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      padding: 20px 0;
+      span{
+        top: 0;
+      }
     }
   }
 

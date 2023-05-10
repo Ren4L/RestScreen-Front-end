@@ -14,7 +14,7 @@
     height: calc(100vh - 80px - 70px);
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     padding: 40px 0;
     h1{
       margin-left: 40px;
@@ -33,15 +33,17 @@
   .Message--Category--Container{
     position: relative;
     font-size: 0.32em;
+    margin-top: 76px;
     @media (max-width: 1035px) {
       position: absolute;
       right: calc(40px + 1vw);
       top: 34vh;
+      margin-top: 0;
     }
     @media (max-width: 850px) {
       top: 33vh;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
       right: 5px;
     }
     .Message--Category{
@@ -63,6 +65,9 @@
       }
       &--Active{
         background: $colorThree;
+        &:hover{
+          background: $colorThree;
+        }
       }
     }
   }

@@ -55,7 +55,7 @@ const Authorization:FC = () => {
                     </div>
                     <Icons.Google className='margin--el'/>
                     <div className="Form__foot--button margin--el">{t("Form.forgotPass")} <Link to={'/Forgotpass'}>{t("Form.recoverPass")}</Link></div>
-                    <Button content={t("Button.signIn")}/>
+                    <Button content={t("Button.signIn")} link='/Auth'/>
                 </form>
             </main>
         </Fragment>

@@ -1,0 +1,96 @@
+@import "../../index.scss";
+
+.container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1em;
+  width: 100%;
+  padding: 30px 40px;
+  .nameAndMessage{
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    padding: 15px 15px;
+  }
+  &User{
+    @extend .container;
+    justify-content: flex-end;
+    .nameAndMessage{
+      align-items: flex-end;
+      width: 100%;
+      .message{
+        text-align: right;
+      }
+    }
+  }
+  &Mobile{
+    @extend .container;
+    width: 100%;
+    .nameAndMessage{
+      .message{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.photo{
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50% !important;
+  &Null{
+    @extend .photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $colorThree;
+    @media (max-width: 600px) {
+      max-width: 35px;
+      max-height: 35px;
+      min-width: 35px;
+      min-height: 35px;
+    }
+    svg{
+      @media (max-width: 600px) {
+        min-width: 35px !important;
+        min-height: 35px !important;
+        max-width: 35px !important;
+        max-height: 35px !important;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
+
+.nameAndMessage{
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  margin: 0 15px;
+  .nameAndTime{
+    display: flex;
+    font-size: 1em;
+    .name{
+      font-size: 0.32em;
+      font-weight: bold;
+    }
+    .time{
+      font-size: 0.32em;
+      margin: 0 10px;
+      color: #D1D1D2;
+    }
+  }
+  .message{
+    width: 60%;
+    font-size: 0.32em;
+    margin-top: 10px;
+  }
+}

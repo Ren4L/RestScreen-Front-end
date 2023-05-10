@@ -38,6 +38,7 @@ export interface IButton {
     link?:string,
     style?:string,
     css?:CSSProperties,
+    handleClick?:MouseEventHandler
 }
 
 export interface IInput {
@@ -60,6 +61,7 @@ export interface ICircleButton{
     link?:string
     handleClick?:MouseEventHandler,
     margin?: boolean,
+    scale?: number,
 }
 
 export interface IMessageBlock{
@@ -70,3 +72,46 @@ export interface IMessageBlock{
     lastMessage: string,
     countMessage?: number,
 }
+
+export interface IMessage{
+    id: number,
+    isCompanion?:boolean,
+    photo?:string,
+    nickname: string,
+    time:Date,
+    message: string,
+}
+
+export interface IVideo{
+    id:number,
+    url:string,
+    poster?: string,
+    category: string,
+    title: string,
+    datePublic: Date,
+    views: number,
+    authorId:number,
+    authorName: string,
+    authorPhoto?: string,
+}
+
+export interface IComment{
+    id: number,
+    authorName: string,
+    authorPhoto?: string,
+    comment: string,
+    datePublic: Date,
+    likes: number,
+    dislikes: number
+}
+
+
+
+
+
+
+
+
+
+
+

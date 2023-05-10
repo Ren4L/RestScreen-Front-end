@@ -75,7 +75,30 @@ img {
   vertical-align: top;
 }
 
-.container {
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
+.container, .containerInline {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -86,186 +109,289 @@ img {
   border-radius: 20px;
   font-size: 16px;
   padding: 10px;
+  cursor: pointer;
 }
 .containerHover {
   transform: scale(1.2);
   background: #19181F;
   z-index: 3;
 }
-.container .timing {
+.container .timing, .containerInline .timing {
   position: absolute;
-  top: 10.7vw;
-  right: 6%;
+  top: 10.4vw;
+  right: 8%;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 5px 10px;
   font-family: "Manrope", serif;
   font-size: 12px;
+  max-width: 52px;
+  max-height: 22px;
 }
 @media (max-width: 1000px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 14vw;
   }
 }
 @media (max-width: 850px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 12.5vw;
     right: 8%;
   }
 }
 @media (max-width: 800px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 17.2vw;
     right: 8%;
   }
 }
 @media (max-width: 700px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 20.5vw;
     right: 8%;
   }
 }
 @media (max-width: 600px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 20.7vw;
     right: 8%;
   }
 }
 @media (max-width: 500px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 40vw;
     right: 8%;
   }
 }
 @media (max-width: 350px) {
-  .container .timing {
+  .container .timing, .containerInline .timing {
     top: 39vw;
     right: 8%;
   }
 }
-.container .favourity {
+.container .favourity, .containerInline .favourity {
   position: absolute;
-  top: 5%;
-  right: 6%;
+  top: 7%;
+  right: 8%;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 5px;
   z-index: 2;
 }
-.container .favourity:hover {
+.container .favourity:hover, .containerInline .favourity:hover {
   cursor: pointer;
 }
-.container .favourity:hover svg {
+.container .favourity:hover svg, .containerInline .favourity:hover svg {
   fill: white;
 }
-.container .favourity svg {
+.container .favourity svg, .containerInline .favourity svg {
   width: 20px;
   height: 20px;
 }
 @media (max-width: 850px) {
-  .container .favourity {
+  .container .favourity, .containerInline .favourity {
     top: 6%;
     right: 8%;
   }
 }
 @media (max-width: 1240px) {
-  .container {
+  .container, .containerInline {
     font-size: 14px;
   }
 }
 @media (max-width: 850px) {
-  .container {
+  .container, .containerInline {
     font-size: 13px;
   }
-  .container:hover {
+  .container:hover, .containerInline:hover {
     transform: scale(1);
     background: transparent;
   }
 }
 @media (max-width: 700px) {
-  .container {
+  .container, .containerInline {
     font-size: 15px;
   }
 }
 @media (max-width: 500px) {
-  .container {
+  .container, .containerInline {
     font-size: 16px;
   }
 }
-.container video {
+.container video, .containerInline video {
   border-radius: 15px;
   width: 100%;
   height: 12vw;
   margin-bottom: 10px;
 }
 @media (max-width: 1000px) {
-  .container video {
+  .container video, .containerInline video {
     height: 16vw;
   }
 }
 @media (max-width: 850px) {
-  .container video {
+  .container video, .containerInline video {
     height: 15vw;
   }
 }
 @media (max-width: 800px) {
-  .container video {
+  .container video, .containerInline video {
     height: 20vw;
   }
 }
 @media (max-width: 700px) {
-  .container video {
+  .container video, .containerInline video {
     height: 24vw;
   }
 }
 @media (max-width: 500px) {
-  .container video {
+  .container video, .containerInline video {
     height: 45vw;
   }
 }
-.container .infContainer {
+.container .infContainer, .containerInline .infContainer {
   width: 95%;
 }
-.container .infContainer .category {
+.container .infContainer .category, .containerInline .infContainer .category {
   font-size: 0.875em;
   color: #FF4D00;
   text-align: left;
   width: 100%;
   padding-bottom: 5px;
 }
-.container .infContainer .title {
+.container .infContainer .title, .containerInline .infContainer .title {
   font-weight: 700;
   font-size: 1em;
   line-height: 20px;
   width: 100%;
 }
-.container .infContainer .timeAndViewsContainer {
+.container .infContainer .timeAndViewsContainer, .containerInline .infContainer .timeAndViewsContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   font-size: 0.875em;
+  padding: 10px 0;
 }
-.container .infContainer .authorContainer {
+.container .infContainer .authorContainer, .containerInline .infContainer .authorContainer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
   font-size: 1em;
+  cursor: pointer;
 }
-.container .infContainer .authorContainer .photo {
+.container .infContainer .authorContainer .photo, .containerInline .infContainer .authorContainer .photo {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-.container .infContainer .authorContainer .name {
+.container .infContainer .authorContainer .name, .containerInline .infContainer .authorContainer .name {
   font-weight: 400;
   font-size: 0.875em;
   line-height: 127.6%;
   margin-left: 10px;
 }
-.container .infContainer .padding {
-  padding-bottom: 10px;
+
+.containerInline {
+  flex-direction: row;
+  align-items: center;
+  background: #19181F;
+  height: auto;
+  padding: 45px 35px;
+  font-size: 1em;
+  transition: none;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .containerInline {
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #525060;
+    padding: 40px 10px;
+  }
+  .containerInline .count {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .containerInline {
+    flex-direction: column;
+  }
+}
+.containerInline:hover {
+  transform: none;
+  background: #2f2d38;
+}
+.containerInline .videoCont {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 400px) {
+  .containerInline .videoCont {
+    width: 100%;
+  }
+}
+.containerInline .video {
+  margin: 0;
+  height: 100%;
+}
+.containerInline .favourity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+}
+.containerInline .timing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.24em;
+  bottom: 15px;
+  right: 15px;
+  top: auto;
+}
+.containerInline .count {
+  font-size: 0.36em;
+  font-weight: bold;
+  padding-right: 20px;
+  opacity: 0.5;
+}
+.containerInline .infContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1em;
+  padding-left: 20px;
+  height: 100%;
+}
+@media (max-width: 400px) {
+  .containerInline .infContainer {
+    padding: 20px 0 0;
+  }
+}
+.containerInline .infContainer .category {
+  font-size: 0.32em;
+}
+.containerInline .infContainer .title {
+  font-weight: bold;
+  font-size: 0.36em;
+}
+.containerInline .infContainer .timeAndViewsContainer {
+  font-size: 0.32em;
+  justify-content: flex-start;
+}
+.containerInline .infContainer .timeAndViewsContainer .timeAgo {
+  padding-left: 20px;
+}
+.containerInline .infContainer .authorContainer {
+  font-size: 1em;
+}
+.containerInline .infContainer .authorContainer .name {
+  font-size: 0.32em;
 }
 
 /*# sourceMappingURL=VideoBlock.module.css.map */

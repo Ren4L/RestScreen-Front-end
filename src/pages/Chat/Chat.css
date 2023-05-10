@@ -75,6 +75,29 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .Chat--container {
   display: flex;
   flex-direction: column;
@@ -85,13 +108,134 @@ img {
   overflow: hidden scroll;
   font-size: 1em;
 }
+@media (max-width: 600px) {
+  .Chat--container {
+    padding: 0;
+    font-size: 1.2em;
+  }
+}
 .Chat--container .Chat {
+  display: flex;
+  flex-direction: column;
   font-size: 1em;
   width: 100%;
   height: 100%;
   background: #19181F;
   border-radius: 20px;
   border: 1px solid #525060;
+}
+@media (max-width: 600px) {
+  .Chat--container .Chat {
+    border-radius: 0;
+    border: none;
+  }
+}
+.Chat--container .Chat--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1em;
+  padding: 10px 40px;
+}
+.Chat--container .Chat--header--Profile {
+  display: flex;
+  align-items: center;
+  flex-grow: 0.6;
+}
+.Chat--container .Chat--header--Profile .companion {
+  margin-left: 10px;
+}
+.Chat--container .Chat--header .back {
+  font-size: 0.32em;
+  cursor: pointer;
+}
+.Chat--container .Chat--header .back svg {
+  margin-right: 10px;
+}
+.Chat--container .Chat--header .companion {
+  font-size: 0.32em;
+  font-weight: bold;
+}
+.Chat--container .Chat--header .photo, .Chat--container .Chat--header .photoNull {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50% !important;
+}
+.Chat--container .Chat--header .photoNull {
+  border: 1px solid #525060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Chat--container .Chat--header .photoNull svg {
+  min-width: 40px;
+  min-height: 40px;
+}
+@media (max-width: 600px) {
+  .Chat--container .Chat--header .photoNull svg {
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .Chat--container .Chat--header .photo, .Chat--container .Chat--header .photoNull {
+    min-width: 30px;
+    min-height: 30px;
+  }
+}
+.Chat--container .Chat--body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden scroll;
+  border-top: 1px solid #525060;
+  border-bottom: 1px solid #525060;
+  flex-grow: 1;
+}
+.Chat--container .Chat--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  width: 100%;
+  height: 71px;
+}
+.Chat--container .Chat--footer svg {
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .Chat--container .Chat--footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    background: #19181F;
+    border-top: 1px solid #525060;
+    padding: 10px;
+  }
+}
+.Chat--container .Chat--input {
+  border-radius: 10px;
+  border: 1px solid #525060;
+  background: transparent;
+  padding: 10px 30px;
+  color: white;
+  caret-color: white;
+  flex-grow: 0.95;
+}
+@media (max-width: 600px) {
+  .Chat--container .Chat--input {
+    flex-grow: 0.8;
+  }
+}
+@media (max-width: 450px) {
+  .Chat--container .Chat--input {
+    flex-grow: 0.4;
+  }
+}
+@media (max-width: 350px) {
+  .Chat--container .Chat--input {
+    width: 50%;
+  }
 }
 @media (max-width: 600px) {
   .Chat--container {

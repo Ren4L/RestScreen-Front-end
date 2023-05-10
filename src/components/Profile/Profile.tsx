@@ -29,7 +29,7 @@ const Profile = () => {
             </div>
             <hr className={styles.line}/>
             <div className={styles.buttonContainer}>
-                <NavButton css={{width:'100%'}} notBar={true} content={t("Button.personalAccount")}><Icons.ProfileButton/></NavButton>
+                <NavButton css={{width:'100%'}} notBar={true} link={'/Profile/'+(userSelector.id)} content={t("Button.personalAccount")}><Icons.ProfileButton/></NavButton>
                 <NavButton css={{width:'100%'}} notBar={true} link="/auth" content={t("Button.exit")}><Icons.Exit/></NavButton>
             </div>
         </div>;

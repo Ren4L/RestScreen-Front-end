@@ -113,9 +113,34 @@ const SearchPersonalButtons = () => {
     return <>{getSearchPersonalButtons()}</>;
 };
 
+const HomeButtons:FC = () => {
+    const {t} = useTranslation();
+    const dispatch = useDispatch();
+    const {WindowSize} = useWindowSizeState();
+    useEffect(()=>{
+        dispatch({type:"setData", payload:true});
+    }, []);
+    return (
+        <div className={styles.buttonContainer}>
+            <Select/>
+            {
+                WindowSize > 850 ?
+                    <>
+                        <NavButton active={false} link="/" content={t("Button.toHome")}><Icons.Home/></NavButton>
+                    </>
+                    :
+                    <>
+                        <CircleButton link='/'><Icons.Home/></CircleButton>
+                    </>
+            }
+        </div>
+    );
+};
+
 export {
     AuthButtons,
     RegButtons,
     RegAuthButtons,
     SearchPersonalButtons,
+    HomeButtons
 };

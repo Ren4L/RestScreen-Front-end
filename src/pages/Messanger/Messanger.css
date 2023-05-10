@@ -75,6 +75,29 @@ img {
   vertical-align: top;
 }
 
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
 .Message--List--container {
   display: flex;
   flex-direction: row;
@@ -90,7 +113,7 @@ img {
     height: calc(100vh - 80px - 70px);
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .Message--List--container {
     padding: 40px 0;
   }
@@ -112,12 +135,14 @@ img {
 .Message--List--container .Message--Category--Container {
   position: relative;
   font-size: 0.32em;
+  margin-top: 76px;
 }
 @media (max-width: 1035px) {
   .Message--List--container .Message--Category--Container {
     position: absolute;
     right: calc(40px + 1vw);
     top: 34vh;
+    margin-top: 0;
   }
 }
 @media (max-width: 850px) {
@@ -125,7 +150,7 @@ img {
     top: 33vh;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .Message--List--container .Message--Category--Container {
     right: 5px;
   }
@@ -148,6 +173,9 @@ img {
   background: #2f2d38;
 }
 .Message--List--container .Message--Category--Container .Message--Category--Active {
+  background: #525060;
+}
+.Message--List--container .Message--Category--Container .Message--Category--Active:hover {
   background: #525060;
 }
 

@@ -1,6 +1,6 @@
-import React, {ReactNode, useEffect, useState} from 'react';
+import React, {ReactNode} from 'react';
 import {Icons} from "@utils";
-import {AuthButtons, RegAuthButtons, RegButtons, SearchPersonalButtons} from "./HeaderButtons";
+import {AuthButtons, HomeButtons, RegAuthButtons, RegButtons, SearchPersonalButtons} from "./HeaderButtons";
 
 import styles from "./Header.module.scss";
 import {useWindowSizeState} from "@hooks";
@@ -14,6 +14,8 @@ const Header = ({type = "auth"}:IHeader) => {
 
     function getHeaderButtons(type:string):ReactNode {
         switch (type) {
+            case "home":
+                return <HomeButtons/>;
             case "auth":
                 return <AuthButtons/>;
             case "reg":
@@ -27,7 +29,7 @@ const Header = ({type = "auth"}:IHeader) => {
 
     return (
         <header className={styles.container}>
-            <Icons.Logo TextOn={WindowSize < 850 ? false : true}/>
+            <Icons.Logo TextOn={WindowSize <= 850 ? false : true}/>
             {getHeaderButtons(type)}
         </header>
     );

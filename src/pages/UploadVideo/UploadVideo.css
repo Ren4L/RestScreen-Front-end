@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+body {
+  background: #1f1e27;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-reveal, input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: "Manrope", serif;
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  .root {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .root {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    font-size: 40px;
+  }
+}
+
+.UploadVideo--Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  border-radius: 20px;
+  background: #19181F;
+  border: 1px solid #525060;
+  padding: 40px;
+}
+@media (max-width: 600px) {
+  .UploadVideo--Container {
+    border-radius: 0;
+    border: none;
+  }
+}
+.UploadVideo--Container .UploadVideo--rowOne, .UploadVideo--Container .UploadVideo--rowTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .UploadVideo--Container .UploadVideo--rowOne, .UploadVideo--Container .UploadVideo--rowTwo {
+    flex-direction: column;
+  }
+}
+.UploadVideo--Container .UploadVideo--rowTwo {
+  padding: 30px 0;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  .UploadVideo--Container .UploadVideo--rowTwo {
+    flex-direction: column;
+  }
+  .UploadVideo--Container .UploadVideo--rowTwo .UploadVideo--label:last-child {
+    margin-top: 20px;
+  }
+}
+.UploadVideo--Container .UploadVideo--rowTwo svg {
+  width: 100%;
+}
+.UploadVideo--Container .UploadVideo--rowTwo div {
+  width: 20%;
+  margin: 0 10px;
+}
+.UploadVideo--Container .UploadVideo--label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid #525060;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .UploadVideo--Container .UploadVideo--label {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+@media (max-width: 350px) {
+  .UploadVideo--Container .UploadVideo--label {
+    width: 200px;
+    height: 200px;
+  }
+}
+.UploadVideo--Container .UploadVideo--label:hover {
+  background: #2f2d38;
+}
+.UploadVideo--Container .UploadVideo--label:hover div {
+  color: #FF4D00;
+}
+.UploadVideo--Container .UploadVideo--label:hover path {
+  stroke: #FF4D00;
+}
+.UploadVideo--Container .UploadVideo--label div {
+  font-weight: bold;
+  font-size: 0.38em;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.UploadVideo--Container .UploadVideo--select {
+  background: #19181F;
+  color: white;
+  font-size: 0.32em;
+  border: 1px solid #525060;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+@media (max-width: 600px) {
+  .UploadVideo--Container .UploadVideo--select {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+.UploadVideo--Container .UploadVideo--input {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #525060;
+  background: transparent;
+  padding: 10px 30px;
+  color: white;
+  caret-color: white;
+  font-size: 0.32em;
+  flex-grow: 0.9;
+}
+@media (max-width: 640px) {
+  .UploadVideo--Container .UploadVideo--input {
+    flex-grow: 1;
+    width: 20%;
+  }
+}
+@media (max-width: 600px) {
+  .UploadVideo--Container .UploadVideo--input {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=UploadVideo.css.map */

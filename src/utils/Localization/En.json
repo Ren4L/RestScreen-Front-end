@@ -1,5 +1,143 @@
 {
   "Button": {
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "reg": "Registration",
+    "forgot":"Retrieve password",
+    "home": "Home",
+    "toHome": "To home",
+    "close": "Close",
+    "messanger": "Messages",
+    "mySubscribe": "My subscriptions",
+    "friends": "Friends",
+    "favourites": "Favourites",
+    "personalAccount": "Personal account",
+    "exit": "Exit"
+  },
+  "Input": {
+    "search": "Search"
+  },
+  "Error": {
+    "nicknameNotCorrect": "Nickname entered incorrectly",
+    "emailNotCorrect":"Email entered incorrectly",
+    "passwordNotCorrect":"Password not correct",
+    "repeatPassNotCorrect":"Passwords do not match"
+  },
+  "Form": {
+    "nameForgot": "Password Recovery",
+    "title": "Fill in the correct data",
+    "forgotTitle": "Forgot your password?",
+    "email": "Enter your email",
+    "nickname": "Enter a nickname",
+    "repeatPass": "Repeat password",
+    "password": "Enter password",
+    "forgotPass": "Forgot your password?",
+    "recoverPass": "Recover password",
+    "contract": "By logging in, you accept the user agreement, payment terms, privacy policy and cookie policy"
+  },
+  "Home": {
+    "banner": "Log in to your account and experience the power of video content",
+    "title1": "Rate the selections",
+    "title2": "Your recommendations"
+  },
+  "Messanger": {
+    "title": "Messages",
+    "category1": "All chats",
+    "category2": "Unread",
+    "category3": "Read",
+    "parameters": "Parameters"
+  },
+  "Chat": {
+    "title": "Chat",
+    "back": "Back",
+    "input": "Write something"
+  },
+  "CategoryVideo": {
+    "selectCategory": "Select a category",
+    "nature": "Nature",
+    "auto": "Auto",
+    "humor": "Humor",
+    "education": "Education",
+    "entertainment": "Entertainment",
+    "scienceAndTechnology": "Science and technology"
+  },
+  "Video": {
+    "views": "views",
+    "views1": "view",
+    "views2": "views",
+    "thousand": "thousand",
+    "million": "million",
+    "billion": "billion",
+    "year": "years ago",
+    "year1": "a year ago",
+    "year2": "years ago",
+    "month": "months ago",
+    "month1": "one month ago",
+    "month2": "months ago",
+    "day": "days ago",
+    "day1": "a day ago",
+    "day2": "days ago",
+    "hour": "hours ago",
+    "hour1": "an hour ago",
+    "hour2": "hours ago",
+    "minute": "minutes ago",
+    "minute1": "minute ago",
+    "minute2": "minutes ago",
+    "second": "seconds ago",
+    "second1": "a second ago",
+    "second2": "seconds ago",
+    "comment": "comments",
+    "comment1": "comment",
+    "comment2": "comment",
+    "subscribe": "Subscribe",
+    "comments": "Comments",
+    "addComment": "Add comment...",
+    "sendComment": "Leave a comment",
+    "error": "Enter a valid comment"
+  },
+  "Friends": {
+    "category1": "My friends",
+    "category2": "Friend requests",
+    "accept": "Accept request",
+    "notAccept": "Keep in followers",
+    "writeMessage": "Write a message"
+  },
+  "Filter": {
+    "timing": "Duration",
+    "less4": "Less than 4 minutes",
+    "from4to20": "4-20 minutes",
+    "more20": "More than 20 minutes",
+    "dateDownload": "Download date",
+    "lastHour": "Last Hour",
+    "today": "Today",
+    "atThisWeek": "This week",
+    "atThisMonth": "This month",
+    "atThisYear": "This year",
+    "sorting": "Sort by",
+    "watchAll": "Show All"
+  },
+  "Profile": {
+    "title": "Profile Page",
+    "addVideo": "Add new video",
+    "addFriend": "Add as friend",
+    "subscribe": "subscribers",
+    "subscribe1": "subscriber",
+    "subscribe2": "subscriber",
+    "video": "video",
+    "video1": "video",
+    "video2": "video",
+    "bookmark1": "Video",
+    "bookmark2": "Info",
+    "information1": "Description",
+    "information2": "Links"
+  },
+  "NotFound": {
+    "title": "Page not found"
+  },
+  "Upload Video": {
+    "title": "Download Video",
+    "nameVideo": "Video Title",
+    "uploadVideo": "Upload Video",
+    "uploadPoster": "Upload Poster",
+    "upload": "Upload"
   }
 }

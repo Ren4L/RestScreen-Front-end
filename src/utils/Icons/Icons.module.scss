@@ -16,3 +16,46 @@
   font-family: "Manrope", serif;
   color: white;
 }
+
+.Plus:hover{
+  position: relative;
+  rect{
+    fill: $colorHoverOne;
+  }
+}
+
+.label{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.Volume {
+  position: absolute;
+  z-index: 1;
+  input[type=range]{
+    transform: rotate(-90deg) scaleX(2.3) scaleY(1.5) translateX(135%);
+  }
+}
+
+.Favorite:hover{
+  fill: white;
+}
+
+.Like{
+  min-width: 24px;
+  &:hover{
+    fill: white;
+    //path{
+    //  stroke: $colorOne;
+    //}
+  }
+}
+
+.Dislike{
+  @extend .Like;
+  transform: scale(-1, -1);
+}

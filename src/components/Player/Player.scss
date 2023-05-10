@@ -1,0 +1,137 @@
+@import "../../index.scss";
+
+.Video--container{
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 1em;
+  
+  @media (max-width: 1000px) {
+    min-height: 400px;
+  }
+
+  @media (max-width: 900px) {
+    min-height: 320px;
+  }
+
+  @media (max-width: 600px) {
+    border-radius: 0;
+  }
+
+  @media (max-width: 450px) {
+    min-height: 220px;
+  }
+  .Loader{
+    width: 15%;
+    &--container{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: transparent;
+    }
+  }
+
+  .Player{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+
+  .element--control{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 22px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 3;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+    &:hover{
+      opacity: 1;
+    }
+
+    input[type=range]{
+      width: 100%;
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: $colorThree;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &::-webkit-slider-runnable-track {
+        height: 7px;
+        -webkit-appearance: none;
+        color: $colorThree;
+        margin-top: -1px;
+      }
+
+      &::-webkit-slider-thumb {
+        width: 0;
+        height: 7px;
+        cursor: ew-resize;
+        -webkit-appearance: none;
+        background: transparent;
+        box-shadow: -2000px 0 0 2000px $colorTwo;
+      }
+
+      &::-moz-range-progress {
+        background-color: $colorTwo;
+      }
+
+      &::-moz-range-track {
+        background-color: $colorThree;
+      }
+
+      &::-ms-fill-lower {
+        background-color: $colorTwo;
+      }
+
+      &::-ms-fill-upper {
+        background-color: $colorThree;
+      }
+    }
+
+    .footer--element{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 1em;
+      padding-top: 10px;
+
+      .right--container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 0.05;
+        font-size: 1em;
+        .Video--timing{
+          font-size: 0.32em;
+        }
+      }
+
+      .left--container{
+        @extend .right--container;
+        flex-grow: 0.02;
+        .video--2x{
+          cursor: pointer;
+          font-size: 0.40em;
+          font-weight: bold;
+          &--active{
+            color: $colorTwo;
+          }
+        }
+      }
+    }
+  }
+}

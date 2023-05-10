@@ -19,24 +19,24 @@ const Search = () => {
         <div className={styles.radioContainer}>
             <p>{t("Filter.timing")}</p>
             <hr style={{border: "1px solid #525060", width:"100%"}}/>
-            <label><input type="radio" name="timing" value='less4'/><span>{t("Filter.less4")}</span></label>
-            <label><input type="radio" name="timing" value='from4to20'/><span>{t("Filter.from4to20")}</span></label>
-            <label><input type="radio" name="timing" value='more20'/><span>{t("Filter.more20")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="timing" value='less4'/><span>{t("Filter.less4")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="timing" value='from4to20'/><span>{t("Filter.from4to20")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="timing" value='more20'/><span>{t("Filter.more20")}</span></label>
         </div>
         <div className={styles.radioContainer}>
             <p>{t("Filter.dateDownload")}</p>
             <hr style={{border: "1px solid #525060", width:"100%"}}/>
-            <label><input type="radio" name="dateDownload" value='lastHour'/><span>{t("Filter.lastHour")}</span></label>
-            <label><input type="radio" name="dateDownload" value='today'/><span>{t("Filter.today")}</span></label>
-            <label><input type="radio" name="dateDownload" value='atThisWeek'/><span>{t("Filter.atThisWeek")}</span></label>
-            <label><input type="radio" name="dateDownload" value='atThisMonth'/><span>{t("Filter.atThisMonth")}</span></label>
-            <label><input type="radio" name="dateDownload" value='atThisYear'/><span>{t("Filter.atThisYear")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="dateDownload" value='lastHour'/><span>{t("Filter.lastHour")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="dateDownload" value='today'/><span>{t("Filter.today")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="dateDownload" value='atThisWeek'/><span>{t("Filter.atThisWeek")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="dateDownload" value='atThisMonth'/><span>{t("Filter.atThisMonth")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="dateDownload" value='atThisYear'/><span>{t("Filter.atThisYear")}</span></label>
         </div>
         <div className={styles.radioContainer}>
             <p>{t("Filter.sorting")}</p>
             <hr style={{border: "1px solid #525060", width:"100%"}}/>
-            <label><input type="radio" name="sorting" value='dateDownload'/><span>{t("Filter.dateDownload")}</span></label>
-            <label><input type="radio" name="sorting" value='timing'/><span>{t("Filter.timing")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="sorting" value='dateDownload'/><span>{t("Filter.dateDownload")}</span></label>
+            <label className={styles.labelCont}><input type="radio" name="sorting" value='timing'/><span>{t("Filter.timing")}</span></label>
         </div>
     </div>;
     const handleClick = () => {
