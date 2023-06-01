@@ -138,7 +138,7 @@ img {
   border: transparent;
   border-top: 0;
   display: none;
-  left: 0%;
+  left: 0;
   position: absolute;
   right: 0;
   top: 100%;
@@ -154,7 +154,7 @@ img {
   cursor: pointer;
   font-size: 16px;
   line-height: 28px;
-  padding: 4px 2px;
+  padding: 4px 4px;
 }
 
 .item:hover {

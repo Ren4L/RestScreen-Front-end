@@ -11,13 +11,9 @@ const NavBar = ({activeButton = 0}:{activeButton:number}) => {
     const {WindowSize} = useWindowSizeState();
     const {t} = useTranslation();
     const menuSelector = useTypedSelector(state => state.menu);
-    const userSelector = useTypedSelector(state => state.user);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     useEffect(() => {
-        if (!userSelector.nickname && location.href.indexOf('/Video/') == -1)
-            navigate('/auth');
         dispatch({type: "disableEverythingExcept/"});
     }, []);
 
@@ -29,8 +25,8 @@ const NavBar = ({activeButton = 0}:{activeButton:number}) => {
                 <NavButton active={activeButton === 1} link="/Messanger" content={t("Button.messanger")}><Icons.Messages/></NavButton>
                 <NavButton active={activeButton === 2} link="/MySubscriptions" content={t("Button.mySubscribe")}><Icons.mySubscriptions/></NavButton>
                 <NavButton active={activeButton === 3} link="/Friends" content={t("Button.friends")}><Icons.Friends/></NavButton>
-                <NavButton active={activeButton === 4} link="/Favourite" content={t("Button.favourites")}><Icons.Favourites/></NavButton>
-                <footer className={menuSelector.value ? null : styles.footerOff}>Copyright ©2023, Isakov</footer>
+                <NavButton active={activeButton === 4} link="/Favourite" content={t("Button.favourites")}><Icons.Favourites hover={false}/></NavButton>
+                <footer className={menuSelector.value ? null : styles.footerOff}><div>Copyright ©2023, Isakov</div></footer>
             </nav>
         );
     else
@@ -40,7 +36,7 @@ const NavBar = ({activeButton = 0}:{activeButton:number}) => {
                 <NavButton active={activeButton === 1} link="/Messanger" content={t("Button.messanger")}><Icons.Messages/></NavButton>
                 <NavButton active={activeButton === 2} link="/MySubscriptions" content={t("Button.mySubscribe")}><Icons.mySubscriptions/></NavButton>
                 <NavButton active={activeButton === 3} link="/Friends" content={t("Button.friends")}><Icons.Friends/></NavButton>
-                <NavButton active={activeButton === 4} link="/Favourite" content={t("Button.favourites")}><Icons.Favourites/></NavButton>
+                <NavButton active={activeButton === 4} link="/Favourite" content={t("Button.favourites")}><Icons.Favourites hover={false}/></NavButton>
             </nav>
         );
 };

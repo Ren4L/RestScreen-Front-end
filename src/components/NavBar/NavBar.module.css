@@ -164,6 +164,9 @@ img {
   overflow: hidden;
   transition: opacity 1s ease-in-out, width 1s ease-in-out;
 }
+.container footer div, .containerAdaptive850 footer div, .containerAdaptive600 footer div {
+  margin-bottom: 5px;
+}
 .container .footerOff, .containerAdaptive850 .footerOff, .containerAdaptive600 .footerOff {
   opacity: 0;
   width: 0;

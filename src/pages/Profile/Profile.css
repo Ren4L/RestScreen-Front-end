@@ -436,6 +436,7 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  height: 38px;
 }
 @media (max-width: 1050px) {
   .Profile--List--container .Profile--inf--content .Profile--inf--partTwo {

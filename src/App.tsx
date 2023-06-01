@@ -1,6 +1,6 @@
 import React, {FC, useEffect} from 'react';
 import {BrowserRouter} from "react-router-dom";
-import {Router} from '@components';
+import {Router} from '@utils';
 import {Provider} from "react-redux";
 import {store, persistor} from "./store/store";
 import {PersistGate} from "redux-persist/integration/react";

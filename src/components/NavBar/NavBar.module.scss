@@ -61,6 +61,9 @@
     overflow: hidden;
     transition: opacity 1s ease-in-out,
                 width 1s ease-in-out;
+    div{
+      margin-bottom: 5px;
+    }
   }
 
   .footerOff{

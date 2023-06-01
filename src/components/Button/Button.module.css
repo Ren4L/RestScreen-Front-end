@@ -107,7 +107,7 @@ img {
   height: 38px;
 }
 
-.container .white, .container .orange, .container .orange--subscribe, .container .orange--forgot, .containerNav .hollow, .containerNav .hollowClose {
+.container .white, .container .orange, .container .orange--subscribe, .container .orange--subscribe--active, .container .orange--forgot, .containerNav .hollow, .containerNav .hollowClose {
   font-size: 1em;
   font-family: "Manrope", serif;
   padding: 10px 0;
@@ -118,7 +118,7 @@ img {
   height: 38px !important;
   transition: 1s ease-in-out;
 }
-.container .white span, .container .orange span, .container .orange--subscribe span, .container .orange--forgot span, .containerNav .hollow span, .containerNav .hollowClose span {
+.container .white span, .container .orange span, .container .orange--subscribe span, .container .orange--subscribe--active span, .container .orange--forgot span, .containerNav .hollow span, .containerNav .hollowClose span {
   position: relative;
   left: 0;
   top: -40px;
@@ -127,7 +127,7 @@ img {
   transition: 1s ease-in-out;
 }
 @media (max-width: 850px) {
-  .container .white span, .container .orange span, .container .orange--subscribe span, .container .orange--forgot span, .containerNav .hollow span, .containerNav .hollowClose span {
+  .container .white span, .container .orange span, .container .orange--subscribe span, .container .orange--subscribe--active span, .container .orange--forgot span, .containerNav .hollow span, .containerNav .hollowClose span {
     top: -29px;
   }
 }
@@ -197,25 +197,31 @@ img {
 .container {
   font-size: 1em;
 }
-.container .orange, .container .orange--subscribe, .container .orange--forgot {
+.container .orange, .container .orange--subscribe, .container .orange--subscribe--active, .container .orange--forgot {
   text-align: center;
   background: #FF4D00;
   font-size: 1em;
   border: 1px #FF4D00 solid;
   transition: all 0.3s ease-in-out;
 }
-.container .orange:hover, .container .orange--subscribe:hover, .container .orange--forgot:hover {
+.container .orange:hover, .container .orange--subscribe:hover, .container .orange--subscribe--active:hover, .container .orange--forgot:hover {
   background: transparent;
 }
-.container .orange--subscribe {
+.container .orange--subscribe, .container .orange--subscribe--active {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 140px;
   padding: 20px 0;
 }
-.container .orange--subscribe span {
+.container .orange--subscribe span, .container .orange--subscribe--active span {
   top: 0;
+}
+.container .orange--subscribe--active {
+  background-color: transparent;
+}
+.container .orange--subscribe--active:hover {
+  background-color: #FF4D00;
 }
 .container .white {
   text-align: center;

@@ -24,16 +24,16 @@ const Messanger = () => {
                         <SearchMessage/>
                         <MessageBlock
                             id={1}
-                            photo="https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"
+                            photo="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
                             nickname="Dantey"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            lastMessage="Такой неунывающий оптимист... что бы ни стряслось. Попадает часто в разные комичные ситуации. Но не все же должны быть серьезными- у всех рас и их представителей свои качества. Джа-Джа сыграл не последнюю роль в миссии Куай-Гона и Оби-Вана. Не приведи он их в Ото-Гунга, неизвестно, как бы все сложилось. Ведь он, испугавшись гнева главных гунганов, мог бы и не помогать Джедаям-сказать, что моя нельзя идти в подводный город, моя вляпайся, моя сильно-сильно пугайся! А мне нравится дружба Джа-Джа и Падме. И еще-как он говорит."
                             time={new Date(Date.now())}
-                            countMessage={2}
+                            countMessage={1}
                         />
                         <MessageBlock
                             id={2}
                             nickname="MSTkrut"
-                            lastMessage="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            lastMessage="Хорошие обзоры, но там на предыдущих страницах я бросал ссылку на Икотику, у него не хуже, а то и лучше. Сложно судить, просто они разные, эти сугубо информативные, а там творчество. "
                             time={new Date(Date.now())}
                         />
                     </div>

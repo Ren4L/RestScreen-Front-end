@@ -89,6 +89,7 @@
     "comment1": "comment",
     "comment2": "comment",
     "subscribe": "Subscribe",
+    "youAreSubscribe": "You subscribed",
     "comments": "Comments",
     "addComment": "Add comment...",
     "sendComment": "Leave a comment",
@@ -133,7 +134,7 @@
   "NotFound": {
     "title": "Page not found"
   },
-  "Upload Video": {
+  "UploadVideo": {
     "title": "Download Video",
     "nameVideo": "Video Title",
     "uploadVideo": "Upload Video",

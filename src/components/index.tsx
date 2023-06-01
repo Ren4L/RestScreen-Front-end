@@ -1,4 +1,3 @@
-import Router from './Router/Router';
 import NavButton from "./Button/NavButton";
 import Button from "./Button/Button";
 import Select from "./Select/Select";
@@ -19,7 +18,6 @@ import Friend from "./Friend/Friend";
 import VideoBlockInline from "./VideoBlock/VideoBlockInline";
 
 export {
-    Router,
     NavButton,
     Select,
     Header,

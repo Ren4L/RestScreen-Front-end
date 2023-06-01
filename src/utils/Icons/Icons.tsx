@@ -118,9 +118,9 @@ export const Friends = () => {
     );
 };
 
-export const Favourites = () => {
+export const Favourites = ({hover = true, fill = false}) => {
     return (
-        <svg className={styles.Favorite} cursor='pointer' width="24" height="24" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={hover ? styles.Favorite : ''} style={fill ? {fill:'white'}:null} cursor='pointer' width="24" height="24" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path transform="translate(-0.3, 0)" d="M13.1417 21.411C12.7917 21.5297 12.1889 21.5297 11.8389 21.411C8.80556 20.3626 2 15.9513 2 8.47397C2 5.17048 4.60556 2.5 7.83333 2.5C9.73889 2.5 11.4306 3.42973 12.5 4.89355C13.55 3.44951 15.2611 2.5 17.1667 2.5C20.3944 2.5 23 5.17048 23 8.47397C23 15.9513 16.1944 20.3626 13.1417 21.411Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     );
@@ -275,9 +275,9 @@ export const FullScreen = ({changeFullScreen}:{changeFullScreen:MouseEventHandle
     )
 }
 
-export const Like = ({handleClick, isLike = true}:{handleClick:MouseEventHandler, isLike?:boolean}) => {
+export const Like = ({handleClick, isLike = true, fill = false}:{handleClick:MouseEventHandler, isLike?:boolean, fill?:boolean}) => {
     return(
-        <svg className={isLike ? styles.Like : styles.Dislike} onClick={handleClick} cursor='pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={isLike ? styles.Like : styles.Dislike} style={fill ? {fill:'white'}:null} onClick={handleClick} cursor='pointer' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.48001 18.3505L10.58 20.7505C10.98 21.1505 11.88 21.3505 12.48 21.3505H16.28C17.48 21.3505 18.78 20.4505 19.08 19.2505L21.48 11.9505C21.98 10.5505 21.08 9.35046 19.58 9.35046H15.58C14.98 9.35046 14.48 8.85046 14.58 8.15046L15.08 4.95046C15.28 4.05046 14.68 3.05046 13.78 2.75046C12.98 2.45046 11.98 2.85046 11.58 3.45046L7.48001 9.55046" stroke="white" strokeWidth="1.5" strokeMiterlimit="10"/>
             <path d="M2.38 18.3504V8.55039C2.38 7.15039 2.98 6.65039 4.38 6.65039H5.38C6.78 6.65039 7.38 7.15039 7.38 8.55039V18.3504C7.38 19.7504 6.78 20.2504 5.38 20.2504H4.38C2.98 20.2504 2.38 19.7504 2.38 18.3504Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

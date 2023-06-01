@@ -2,6 +2,7 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {Loader} from "@components";
 import {Icons, Types} from "@utils";
 import './Player.scss';
+import {Favourites} from "../../utils/Icons/Icons";
 
 
 

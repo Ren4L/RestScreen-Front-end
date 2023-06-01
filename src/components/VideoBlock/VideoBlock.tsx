@@ -13,6 +13,7 @@ const VideoBlock = ({poster, url, id, category, title, authorId, authorName, aut
     const VideoRef = useRef<HTMLVideoElement>(null);
     const ContainerRef = useRef<HTMLDivElement>(null);
     const [Duration, setDuration] = useState<string | React.ReactNode>(<Loader visible={true}/>);
+    const [IsFavourite, setIsFavourite] = useState<boolean>(false);
     const navigate = useNavigate();
     let Animate:boolean = true;
     let TimeAnimate:NodeJS.Timeout;
@@ -53,7 +54,7 @@ const VideoBlock = ({poster, url, id, category, title, authorId, authorName, aut
 
     return (
         <div onClick={()=> navigate('/Video/'+id)} ref={ContainerRef} className={styles.container} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <div className={styles.favourity} onClick={(event) => {event.stopPropagation();}}><Icons.Favourites/></div>
+            <div className={styles.favourity}  onClick={(event) => {event.stopPropagation(); setIsFavourite(prevState => !prevState)}}><Icons.Favourites fill={IsFavourite}/></div>
             <div className={styles.timing}>{Duration}</div>
             <video autoPlay ref={VideoRef} style={{background:`url(${poster}) 50% 50%/cover no-repeat`}}></video>
             <div className={styles.infContainer}>

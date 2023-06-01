@@ -10,6 +10,7 @@ const VideoBlockInline = ({poster, url, id, category, title, authorId, authorNam
     const VideoRef = useRef<HTMLVideoElement>(null);
     const ContainerRef = useRef<HTMLDivElement>(null);
     const [Duration, setDuration] = useState<string | React.ReactNode>(<Loader visible={true}/>);
+    const [IsFavourite, setIsFavourite] = useState<boolean>(false);
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -29,7 +30,7 @@ const VideoBlockInline = ({poster, url, id, category, title, authorId, authorNam
         <div onClick={()=> navigate('/Video/'+id)} ref={ContainerRef} className={styles.containerInline}>
             <div className={styles.count}>{id}</div>
             <div className={styles.videoCont}>
-                <div className={styles.favourity} onClick={(event) => {event.stopPropagation();}}><Icons.Favourites/></div>
+                <div className={styles.favourity} onClick={(event) => {event.stopPropagation(); setIsFavourite(prevState => !prevState)}}><Icons.Favourites fill={IsFavourite}/></div>
                 <div className={styles.timing}>{Duration}</div>
                 <video className={styles.video} autoPlay ref={VideoRef} style={{background:`url(${poster}) 50% 50%/cover no-repeat`}}></video>
             </div>

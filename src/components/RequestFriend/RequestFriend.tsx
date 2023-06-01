@@ -11,7 +11,7 @@ const RequestFriend = ({id, mail, photo, nickname}:Types.IUser) => {
             {t} = useTranslation(),
         {WindowSize} = useWindowSizeState();
     return (
-        <div onClick={() => navigate('/Profile/'+id)} className={styles.container}>
+        <div className={styles.container}>
             {photo ?
                 <div className={styles.photo} style={{background: `url(${photo}) 50% 50%/cover no-repeat`}}></div>
                 :

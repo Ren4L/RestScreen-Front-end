@@ -6,6 +6,7 @@ interface UserAction {
 }
 
 const defaultState:Types.IUser = {
+    id: 0,
     nickname: 'Ren4L',
     photo: 'https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c',
 }

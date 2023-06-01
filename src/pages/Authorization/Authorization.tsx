@@ -24,7 +24,7 @@ const Authorization:FC = () => {
             dispatch({type:"setData", payload:{
                 nickname:'Ren4L',
                 email:AuthForm.email,
-                id:1,
+                id:0,
                 photo:'https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c'}})
             navigate('/');
         }
