@@ -1,4 +1,5 @@
 import React, {ChangeEvent, CSSProperties, MouseEventHandler, ReactNode} from "react";
+import {Types} from "@utils";
 
 export interface IAuth {
     email:string,
@@ -9,13 +10,30 @@ export interface IReg {
     email:string,
     nickname:string,
     password:string,
-    repeatPass:string,
+    passwordRepeat:string,
+}
+
+export interface IUser{
+    id?:number,
+    nickname?:string,
+    email?:string,
+    photo?:string,
+    description?:string,
+    createdAt?:string,
+    updatedAt?:string,
+    accessToken?:string,
+    password?:string,
+}
+
+
+interface IUserAction {
+    type:string;
+    payload?:Types.IUser;
 }
 
 export interface IForgot {
     email:string,
 }
-
 
 export interface INavButton {
     content:string,
@@ -46,14 +64,6 @@ export interface IInput {
     name: string
     className?:string,
     onChange:(e:ChangeEvent<HTMLInputElement>)=>void,
-}
-
-
-export interface IUser{
-    id?:number,
-    nickname?:string,
-    mail?:string,
-    photo?:string,
 }
 
 export interface ICircleButton{

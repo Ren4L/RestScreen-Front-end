@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 import {useWindowSizeState} from "@hooks";
 import {CircleButton} from "@components";
 
-const RequestFriend = ({id, mail, photo, nickname}:Types.IUser) => {
+const RequestFriend = ({id, email, photo, nickname}:Types.IUser) => {
     const navigate = useNavigate(),
             {t} = useTranslation(),
         {WindowSize} = useWindowSizeState();

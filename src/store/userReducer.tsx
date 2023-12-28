@@ -16,7 +16,18 @@ export default (state = defaultState, action:UserAction):Types.IUser => {
         case "setData":
             return {...state, ...action.payload}
         case "clearData":
-            return {...state, nickname:undefined, photo:undefined, id:undefined, mail:undefined}
+            return {
+                ...state,
+                id: undefined,
+                nickname: undefined,
+                email: undefined,
+                photo: undefined,
+                description: undefined,
+                createdAt: undefined,
+                updatedAt: undefined,
+                accessToken: undefined,
+                password: undefined,
+            }
         default:
             return state;
     }

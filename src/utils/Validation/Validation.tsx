@@ -38,7 +38,7 @@ export default class Validation{
                 throw new ValidationError("Error.emailNotCorrect", 1);
             if (!RegForm.password.match(/^[a-zA-Z0-9]{8,16}$/))
                 throw new ValidationError("Error.passwordNotCorrect", 2);
-            if (RegForm.password !== RegForm.repeatPass)
+            if (RegForm.password !== RegForm.passwordRepeat)
                 throw new ValidationError("Error.repeatPassNotCorrect", 3);
             return {flag:true}
         }

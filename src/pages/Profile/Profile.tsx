@@ -8,9 +8,9 @@ import {useTypedSelector, useWindowSizeState} from "@hooks";
 import {useDispatch} from "react-redux";
 
 const users = [
-    {id:0, nickname: "Ren4L", mail: "vladisakov28@gmail.com", photo: "https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"},
-    {id:1, nickname: "Dantey", mail: "123123@dsd.sd", photo: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"},
-    {id:2, nickname: "MSTkrut", mail: "vlad@dsd.sd"}
+    {id:0, nickname: "Ren4L", email: "vladisakov28@gmail.com", photo: "https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c"},
+    {id:1, nickname: "Dantey", email: "123123@dsd.sd", photo: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"},
+    {id:2, nickname: "MSTkrut", email: "vlad@dsd.sd"}
 ];
 
 const socials = [

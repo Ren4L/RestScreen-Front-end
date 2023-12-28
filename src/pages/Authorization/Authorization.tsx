@@ -1,7 +1,7 @@
 import React, {FC, Fragment, useEffect, useRef} from 'react';
 import './Authorization.scss';
 import {Button, Header, Input} from "@components";
-import {Icons, Validation, Types} from "@utils";
+import {Icons, Validation, Types, UserController} from "@utils";
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
@@ -9,7 +9,7 @@ import {useDispatch} from "react-redux";
 
 
 const Authorization:FC = () => {
-    const [AuthForm, setAuthForm] = useState<Types.IAuth>({email:'', password:''});
+    const [AuthForm, setAuthForm] = useState<Types.IAuth>({email:'vladisakov28@gmail.com', password:'12345678'});
     const [ErrorForm, setErrorForm] = useState<string>(' ');
     const FormRef = useRef<HTMLFormElement>(null);
     const ErrorRef = useRef<HTMLDivElement>(null);
@@ -17,24 +17,27 @@ const Authorization:FC = () => {
     const dispatch = useDispatch();
     const {t} = useTranslation();
 
-    function submitAuth(e:React.FormEvent):void {
+    async function submitAuth(e:React.FormEvent) {
         e.preventDefault();
         let result = Validation.Auth(FormRef, AuthForm, ErrorRef);
-        if (result.flag) {
-            dispatch({type:"setData", payload:{
-                nickname:'Ren4L',
-                email:AuthForm.email,
-                id:0,
-                photo:'https://lh3.googleusercontent.com/a/AGNmyxZCvySfNInadKTB2kw94bxLrvODzeA4IBsoXDE2fw=s96-c'}})
-            navigate('/');
-        }
-        else if (ErrorForm !== result.message){
+        if (!result.flag) {
             setErrorForm(result.message);
+            return;
         }
+        let response = (await UserController.auth(dispatch, {email:AuthForm.email, password:AuthForm.password})) as string;
+
+        if (!response){
+            navigate('/');
+            return;
+        }
+
+        if (!ErrorRef.current.classList.contains("Form__error--block__active")) {
+            ErrorRef.current.classList.toggle("Form__error--block__active");
+        }
+        setErrorForm(response);
     }
 
     useEffect(() => {
-        dispatch({type: 'clearData'});
         document.title = t('Button.signIn');
     })
 

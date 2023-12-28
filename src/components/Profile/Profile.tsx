@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
-import {Icons} from "@utils";
+import {Icons, UserController} from "@utils";
 import styles from './Profile.module.scss';
 import {useTypedSelector, useWindowSizeState} from "@hooks";
 import {CircleButton, NavButton} from "@components";
 import {useTranslation} from "react-i18next";
 import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 const Profile = () => {
     const {WindowSize} = useWindowSizeState();
     let userSelector = useTypedSelector(state => state.user);
     let profileSelector = useTypedSelector(state => state.modal.profile);
     let dispatch = useDispatch();
+    const navigate = useNavigate();
     const {t} = useTranslation();
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -18,6 +20,11 @@ const Profile = () => {
         event.stopPropagation();
         dispatch({type: 'disableEverythingExcept/profile'});
     };
+
+    async function handleLogOut() {
+        await UserController.logout(dispatch);
+    }
+
     const modalWindow =
         <div className={`${styles.containerModal} ${profileSelector ? styles.containerModalActive : ''}`}>
             <div className={styles.profileContainer}>
@@ -30,7 +37,7 @@ const Profile = () => {
             <hr className={styles.line}/>
             <div className={styles.buttonContainer}>
                 <NavButton css={{width:'100%'}} notBar={true} link={'/Profile/'+(userSelector.id)} content={t("Button.personalAccount")}><Icons.ProfileButton/></NavButton>
-                <NavButton css={{width:'100%'}} notBar={true} link="/auth" content={t("Button.exit")}><Icons.Exit/></NavButton>
+                <NavButton css={{width:'100%'}} notBar={true} onClick={handleLogOut} content={t("Button.exit")}><Icons.Exit/></NavButton>
             </div>
         </div>;
 

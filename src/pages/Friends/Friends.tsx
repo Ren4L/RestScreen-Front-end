@@ -36,8 +36,8 @@ const Friends = () => {
                             {WindowSize <= 1200 ? <div className="block--header--parameters" onClick={() => dispatch({type: 'disableEverythingExcept/filterFriends'})}>{t("Messanger.parameters")}<Icons.ChevronDown/></div> : null}
                         </div>
                         <SearchFriends/>
-                        <Friend id={1} nickname="Dantey" mail="Dantey@mail.ru" photo="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"/>
-                        <Friend id={2} nickname="MSTkrut" mail="MSTkrut@mail.ru"/>
+                        <Friend id={1} nickname="Dantey" email="Dantey@mail.ru" photo="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"/>
+                        <Friend id={2} nickname="MSTkrut" email="MSTkrut@mail.ru"/>
                     </div>
                 );
             case "Request":
@@ -47,8 +47,8 @@ const Friends = () => {
                             <div className="block--header--title">{t("Friends.category2")}</div>
                             {WindowSize <= 1200 ? <div className="block--header--parameters" onClick={() => dispatch({type: 'disableEverythingExcept/filterFriends'})}>{t("Messanger.parameters")}<Icons.ChevronDown/></div> : null}
                         </div>
-                        <RequestFriend id={4} nickname="MSTkrut2" mail="MSTkrut2@mail.ru"/>
-                        <RequestFriend id={5} nickname="Lord_Games" mail="Lord_Games@mail.ru"/>
+                        <RequestFriend id={4} nickname="MSTkrut2" email="MSTkrut2@mail.ru"/>
+                        <RequestFriend id={5} nickname="Lord_Games" email="Lord_Games@mail.ru"/>
                     </div>
                 );
         }

@@ -8,8 +8,8 @@ import {useTypedSelector, useWindowSizeState} from "@hooks";
 
 const Chat = () => {
     const companions = [
-        {id:1, nickname: "Dantey", mail: "123123@dsd.sd", photo: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"},
-        {id:2, nickname: "MSTkrut", mail: "vlad@dsd.sd"}
+        {id:1, nickname: "Dantey", email: "123123@dsd.sd", photo: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"},
+        {id:2, nickname: "MSTkrut", email: "vlad@dsd.sd"}
     ];
     const [Companion, setCompanion] = useState<Types.IUser>(null),
         {t} = useTranslation(),

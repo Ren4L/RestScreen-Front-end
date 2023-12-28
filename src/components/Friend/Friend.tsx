@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import {Icons, Types} from "@utils";
 import styles from './Friend.module.scss';
 
-const Friend = ({id, mail, photo, nickname}:Types.IUser) => {
+const Friend = ({id, email, photo, nickname}:Types.IUser) => {
     const navigate = useNavigate(),
         {t} = useTranslation();
     return (

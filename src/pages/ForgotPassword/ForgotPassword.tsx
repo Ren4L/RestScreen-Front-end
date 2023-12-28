@@ -6,7 +6,7 @@ import {Button, Header, Input} from "@components";
 import './ForgotPassword.scss';
 
 const ForgotPassword = () => {
-    const [ForgotForm, setForgotForm] = useState<Types.IReg>({email:'', password:'', nickname:'', repeatPass:''});
+    const [ForgotForm, setForgotForm] = useState<Types.IReg>({email:'', password:'', nickname:'', passwordRepeat:''});
     const [ErrorForm, setErrorForm] = useState<string>(' ');
     const FormRef = useRef<HTMLFormElement>(null);
     const ErrorRef = useRef<HTMLDivElement>(null);

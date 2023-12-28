@@ -1,27 +1,38 @@
 import React, {Fragment, useEffect, useRef, useState} from 'react';
-import {Icons, Types, Validation} from "@utils";
+import {Icons, Types, UserController, Validation} from "@utils";
 import {Link, useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {Button, Header, Input} from "@components";
 import './Registration.scss';
+import {useDispatch} from "react-redux";
 
 const Registration = () => {
-    const [RegForm, setRegForm] = useState<Types.IReg>({email:'', password:'', nickname:'', repeatPass:''});
+    const [RegForm, setRegForm] = useState<Types.IReg>({email:'vladisakov28@gmail.com', password:'12345678', nickname:'Ren4L', passwordRepeat:'12345678'});
     const [ErrorForm, setErrorForm] = useState<string>(' ');
     const FormRef = useRef<HTMLFormElement>(null);
     const ErrorRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const {t} = useTranslation();
 
-    function submitReg(e:React.FormEvent):void {
+    async function submitReg(e:React.FormEvent) {
         e.preventDefault();
         let result = Validation.Reg(FormRef, RegForm, ErrorRef);
-        if (result.flag) {
-            navigate('/Auth');
-        }
-        else {
+        if (!result.flag) {
             setErrorForm(result.message);
+            return;
         }
+        let response = (await UserController.register(dispatch, RegForm)) as string;
+
+        if (!response){
+            navigate('/');
+            return;
+        }
+
+        if (!ErrorRef.current.classList.contains("Form__error--block__active")) {
+            ErrorRef.current.classList.toggle("Form__error--block__active");
+        }
+        setErrorForm(response);
     }
 
     useEffect(() => {
@@ -42,7 +53,7 @@ const Registration = () => {
                     <div className="Form__input--title">{t("Form.password")}</div>
                     <Input name="password" onChange={(e)=>{setRegForm({...RegForm, password:e.target.value})}} className='margin--el' placeholder='••••••••'/>
                     <div className="Form__input--title">{t("Form.repeatPass")}</div>
-                    <Input name="password" onChange={(e)=>{setRegForm({...RegForm, repeatPass:e.target.value})}} className='margin--el' placeholder='••••••••'/>
+                    <Input name="password" onChange={(e)=>{setRegForm({...RegForm, passwordRepeat:e.target.value})}} className='margin--el' placeholder='••••••••'/>
                     <div ref={ErrorRef} className='Form__error--block'>
                         <Icons.Error/>
                         <span>{t(ErrorForm)}</span>
