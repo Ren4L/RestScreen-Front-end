@@ -303,12 +303,48 @@ export const NotAcceptFriend = ({scale = 24}:{scale?:number}) => {
     )
 }
 
-export const Download = () => {
+export const Download = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
     return(
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 17V11M9 11L7 13M9 11L11 13" stroke="white" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="white" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="white" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     )
+}
+
+export const Edit = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
+    return (
+        <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const Check = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
+    return (
+        <svg {...props} width="24" height="17" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 1L6 12L1 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}
+
+export const Link = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
+    return (
+        <svg {...props} width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.33325 10.8332C8.69113 11.3117 9.14772 11.7075 9.67204 11.994C10.1964 12.2805 10.7762 12.4508 11.3721 12.4935C11.9681 12.5362 12.5662 12.4502 13.126 12.2414C13.6858 12.0326 14.1942 11.7058 14.6166 11.2832L17.1166 8.78322C17.8756 7.99738 18.2956 6.94487 18.2861 5.85238C18.2766 4.7599 17.8384 3.71485 17.0658 2.94231C16.2933 2.16978 15.2482 1.73157 14.1558 1.72208C13.0633 1.71259 12.0108 2.13256 11.2249 2.89156L9.79159 4.31656" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.6666 9.16677C11.3087 8.68833 10.8521 8.29245 10.3278 8.00599C9.80347 7.71953 9.22367 7.54918 8.62771 7.50649C8.03176 7.46381 7.4336 7.5498 6.8738 7.75862C6.314 7.96744 5.80566 8.29421 5.38326 8.71677L2.88326 11.2168C2.12426 12.0026 1.70429 13.0551 1.71378 14.1476C1.72327 15.2401 2.16148 16.2851 2.93401 17.0577C3.70655 17.8302 4.7516 18.2684 5.84408 18.2779C6.93657 18.2874 7.98908 17.8674 8.77492 17.1084L10.1999 15.6834" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+}
+
+export const Image = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => {
+    return (
+        <svg {...props} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.5 10C9.32843 10 10 9.32843 10 8.5C10 7.67157 9.32843 7 8.5 7C7.67157 7 7 7.67157 7 8.5C7 9.32843 7.67157 10 8.5 10Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M21 15L16 10L5 21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
 }

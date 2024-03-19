@@ -3,6 +3,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -30,6 +31,10 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({filename:'[name].[hash].css'}),
         new CleanWebpackPlugin(),
+        new Dotenv({
+            path: './.env',
+            safe: true,
+        })
     ],
     resolve: {
         alias: {

@@ -1,0 +1,38 @@
+@import "../../index.scss";
+
+.title{
+  font-size: 0.32em;
+  margin-left: 10px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: fit-content;
+  a{
+    display: flex;
+    align-items: center;
+  }
+  .iconContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    svg{
+      display: none;
+      margin-left: 10px;
+    }
+  }
+  &:hover{
+    .iconContainer svg{
+      display: block;
+    }
+  }
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+}

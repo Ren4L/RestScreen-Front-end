@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import styles from './MessageBlock..module.scss';
+import styles from './MessageBlock.module.scss';
 import {Icons, Types} from "@utils";
 import {useWindowSizeState} from "@hooks";
 import {useNavigate} from "react-router-dom";

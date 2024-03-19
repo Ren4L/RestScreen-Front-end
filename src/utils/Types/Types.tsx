@@ -18,11 +18,13 @@ export interface IUser{
     nickname?:string,
     email?:string,
     photo?:string,
+    banner?:string,
     description?:string,
     createdAt?:string,
     updatedAt?:string,
     accessToken?:string,
     password?:string,
+    links?: ILink[]
 }
 
 
@@ -61,9 +63,11 @@ export interface IButton {
 
 export interface IInput {
     placeholder:string,
-    name: string
+    type?: string,
+    name?: string,
     className?:string,
-    onChange:(e:ChangeEvent<HTMLInputElement>)=>void,
+    onChange?:(e:ChangeEvent<HTMLInputElement>)=>void,
+    value?: string,
 }
 
 export interface ICircleButton{
@@ -115,6 +119,15 @@ export interface IComment{
     dislikes: number
 }
 
+export interface ILink{
+    id:number,
+    title: string,
+    link:string,
+    icon?:string,
+    user_id:number,
+    createdAt:string,
+    updatedAt:string,
+}
 
 
 

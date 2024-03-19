@@ -28,6 +28,45 @@
     padding: 25px 0;
     border-bottom: 1px solid $colorThree;
 
+    &__Add--link--Container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__Add--link{
+      display: flex;
+      padding: 0;
+      margin-top: 10px;
+      .Link--input{
+        height: 40px;
+        width: 50%;
+        margin-right: 10px;
+        input {
+          border: 1px solid #525060;
+          border-radius: 5px;
+        }
+      }
+      .Information--block__Link--icon{
+        height: 40px;
+        padding: 5px;
+        border: 1px solid #525060;
+        border-radius: 5px;
+        cursor: pointer;
+        background: $inputColor;
+        margin-right: 10px;
+      }
+    }
+
+    .Form__error--block{
+      z-index: -1;
+    }
+    .Form__error--block__active{
+      margin: 0;
+      padding: 10px 0;
+      height: fit-content;
+      align-items: flex-start;
+    }
+
     @media (max-width: 600px) {
       padding: 10px 25px;
     }
@@ -49,6 +88,17 @@
       display: flex;
       margin-top: 10px;
       font-size: 0.32em;
+      align-items: center;
+      svg{
+        margin-left: 10px;
+      }
+      .Description--input {
+        width: calc(100% - 68px);
+        input {
+          border: 1px solid #525060;
+          border-radius: 5px;
+        }
+      }
     }
 
     &--container{
@@ -59,12 +109,40 @@
   }
 
   .Profile--banner{
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     width: 100%;
     min-height: 40%;
+    overflow: hidden;
     @media (max-width: 600px) {
       border-radius: 0;
+    }
+
+    &:hover{
+      .Profile--banner__hover{
+        display: flex;
+        opacity: 1;
+      }
+    }
+    .Profile--banner--label{
+      width: fit-content;
+      height: fit-content;
+      z-index: 2;
+    }
+
+    &__hover{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .5);
+      opacity: 0;
+      transition: opacity .5s;
     }
   }
 

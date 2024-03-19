@@ -47,13 +47,13 @@ const Registration = () => {
                     <h1 className='margin--el'>{t("Button.reg")}</h1>
                     <h2 className='margin--el'>{t("Form.title")}</h2>
                     <div className="Form__input--title">{t("Form.nickname")}</div>
-                    <Input name="text" onChange={(e)=>{setRegForm({...RegForm, nickname:e.target.value})}} className='margin--el' placeholder='Vlad123'/>
+                    <Input type="text" onChange={(e)=>{setRegForm({...RegForm, nickname:e.target.value})}} className='margin--el' placeholder='Vlad123'/>
                     <div className="Form__input--title">{t("Form.email")}</div>
-                    <Input name="email" onChange={(e)=>{setRegForm({...RegForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
+                    <Input type="email" onChange={(e)=>{setRegForm({...RegForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
                     <div className="Form__input--title">{t("Form.password")}</div>
-                    <Input name="password" onChange={(e)=>{setRegForm({...RegForm, password:e.target.value})}} className='margin--el' placeholder='••••••••'/>
+                    <Input type="password" onChange={(e)=>{setRegForm({...RegForm, password:e.target.value})}} className='margin--el' placeholder='••••••••'/>
                     <div className="Form__input--title">{t("Form.repeatPass")}</div>
-                    <Input name="password" onChange={(e)=>{setRegForm({...RegForm, passwordRepeat:e.target.value})}} className='margin--el' placeholder='••••••••'/>
+                    <Input type="password" onChange={(e)=>{setRegForm({...RegForm, passwordRepeat:e.target.value})}} className='margin--el' placeholder='••••••••'/>
                     <div ref={ErrorRef} className='Form__error--block'>
                         <Icons.Error/>
                         <span>{t(ErrorForm)}</span>

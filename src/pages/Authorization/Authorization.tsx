@@ -49,9 +49,9 @@ const Authorization:FC = () => {
                     <h1 className='margin--el'>{t("Button.signIn")}</h1>
                     <h2 className='margin--el'>{t("Form.title")}</h2>
                     <div className="Form__input--title">{t("Form.email")}</div>
-                    <Input name="email" onChange={(e)=>{setAuthForm({...AuthForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
+                    <Input type="email" onChange={(e)=>{setAuthForm({...AuthForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
                     <div className="Form__input--title">{t("Form.password")}</div>
-                    <Input name="password" onChange={(e)=>{setAuthForm({...AuthForm, password:e.target.value})}} className='margin--el' placeholder='••••••••'/>
+                    <Input type="password" onChange={(e)=>{setAuthForm({...AuthForm, password:e.target.value})}} className='margin--el' placeholder='••••••••'/>
                     <div ref={ErrorRef} className='Form__error--block'>
                         <Icons.Error/>
                         <span>{t(ErrorForm)}</span>

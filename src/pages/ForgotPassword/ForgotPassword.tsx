@@ -36,7 +36,7 @@ const ForgotPassword = () => {
                     <h1 className='margin--el'>{t("Form.nameForgot")}</h1>
                     <h2 className='margin--el'>{t("Form.forgotTitle")}</h2>
                     <div className="Form__input--title">{t("Form.email")}</div>
-                    <Input name="email" onChange={(e)=>{setForgotForm({...ForgotForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
+                    <Input type="email" onChange={(e)=>{setForgotForm({...ForgotForm, email:e.target.value})}} className='margin--el' placeholder='test@gmail.com'/>
                     <div ref={ErrorRef} className='Form__error--block'>
                         <Icons.Error/>
                         <span>{t(ErrorForm)}</span>

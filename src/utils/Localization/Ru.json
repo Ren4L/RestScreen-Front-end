@@ -14,13 +14,21 @@
     "exit": "Выйти"
   },
   "Input": {
-    "search": "Поиск"
+    "search": "Поиск",
+    "description": "Введите описание"
   },
   "Error": {
     "nicknameNotCorrect":"Никнейм введен не корректно",
     "emailNotCorrect":"Почта введена не корректно",
     "passwordNotCorrect":"Пароль введен не корректно",
-    "repeatPassNotCorrect":"Пароли не совпадают"
+    "repeatPassNotCorrect":"Пароли не совпадают",
+    "serverError": "Ошибка сервера",
+    "notString": "Введенные данные не являются строкой",
+    "notNumber": "Введенные данные не являются числовым типом",
+    "notBoolean": "Введенные данные не являются логическим типом",
+    "Null": "Введенные данные не равны null",
+    "notNull": "Введенные данные равны null",
+    "editDescription": "Не верный формат описания. \nОт 8 символов и разрешены следующие символы: а-яА-Яa-zA-Z0-9?!,.'\"Ёё:;()"
   },
   "Form": {
     "nameForgot": "Восстановление пароля",
@@ -129,7 +137,12 @@
     "bookmark1": "Видео",
     "bookmark2": "Информация",
     "information1": "Описание",
-    "information2": "Cсылки"
+    "information2": "Cсылки",
+    "defaultDescription": "Описание отсутствует",
+    "linkTitle": "Заголовок ссылки",
+    "link": "Ссылка",
+    "add": "Добавить",
+    "uploadBanner": "Загрузить баннер"
   },
   "NotFound": {
     "title": "Страница не найдена"
